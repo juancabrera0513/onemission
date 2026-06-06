@@ -6,7 +6,6 @@ export default function Contact() {
     <>
       <section className="contact-hero">
         <div className="container narrow center">
-          <p className="eyebrow">Start Here</p>
           <h1>
             Choose the path that fits your season.
           </h1>

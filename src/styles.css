@@ -388,19 +388,6 @@ main {
    TYPOGRAPHY
 ========================= */
 
-.eyebrow {
-  margin: 0 0 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--coral-dark);
-  font-weight: 900;
-  font-size: 0.78rem;
-}
-
-.eyebrow.pink {
-  color: var(--coral);
-}
-
 h1,
 h2,
 h3 {
@@ -434,6 +421,25 @@ h3 span {
 .hero-text {
   font-size: 1.14rem;
   max-width: 720px;
+}
+
+.home-hero-copy,
+.sub-hero-grid > div:first-child,
+.about-hero-new-copy {
+  text-align: center;
+}
+
+.home-hero-copy .hero-text,
+.sub-hero-grid > div:first-child .hero-text,
+.about-hero-new-copy .hero-text,
+.contact-hero .hero-text {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.home-hero-copy .button-row,
+.sub-hero-grid > div:first-child .button-row {
+  justify-content: center;
 }
 
 /* =========================
@@ -655,6 +661,7 @@ h3 span {
 
 .section-heading {
   margin-bottom: 56px;
+  text-align: center;
 }
 
 .choice-grid {
@@ -664,8 +671,8 @@ h3 span {
 }
 
 .choice-card {
-  min-height: 520px;
-  padding: 44px;
+  min-height: 400px;
+  padding: 34px 40px;
   background: var(--cream);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
@@ -673,6 +680,8 @@ h3 span {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  text-align: center;
   position: relative;
   overflow: hidden;
   transform: translateZ(0);
@@ -742,13 +751,16 @@ h3 span {
 }
 
 .choice-logo-box {
-  min-height: 120px;
+  min-height: 105px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .choice-logo-box img {
-  max-height: 105px;
+  width: min(100%, 260px);
+  max-height: 110px;
   object-fit: contain;
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -758,7 +770,9 @@ h3 span {
 }
 
 .choice-logo-box.wide img {
-  max-width: 330px;
+  width: min(100%, 430px);
+  max-width: 430px;
+  max-height: 120px;
 }
 
 .card-label {
@@ -767,6 +781,10 @@ h3 span {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.76rem;
+}
+
+.choice-card .card-label {
+  margin: 0 0 10px;
 }
 
 .choice-link {
@@ -792,6 +810,16 @@ h3 span {
   background:
     radial-gradient(circle at 90% 12%, var(--sky-soft), transparent 26%),
     var(--cream);
+}
+
+.home-about-preview .about-preview-grid > div:last-child {
+  text-align: center;
+}
+
+.home-about-preview .about-preview-grid > div:last-child p {
+  max-width: 680px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .about-preview-grid,
@@ -935,6 +963,11 @@ h3 span {
   font-weight: 600;
 }
 
+.editorial-title,
+.black-panel > div:first-child {
+  text-align: center;
+}
+
 .editorial-copy p {
   font-size: 1.08rem;
 }
@@ -975,6 +1008,7 @@ h3 span {
   background: var(--cream);
   min-height: 300px;
   border-radius: var(--radius);
+  text-align: center;
   transition:
     transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.35s ease,
@@ -1066,6 +1100,14 @@ h3 span {
 
 .book-content p {
   font-size: 1.02rem;
+}
+
+.book-content h2 {
+  text-align: center;
+}
+
+.book-content .button-row {
+  justify-content: center;
 }
 
 .character-grid {
@@ -1188,6 +1230,7 @@ h3 span {
 .about-story-heading {
   position: sticky;
   top: 140px;
+  text-align: center;
 }
 
 .about-story-heading h2 {
@@ -1237,6 +1280,8 @@ h3 span {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -1249,6 +1294,8 @@ h3 span {
   min-height: 130px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .about-path-logo img {
@@ -1294,6 +1341,7 @@ h3 span {
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  text-align: center;
   transition:
     transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.4s ease,
@@ -1308,6 +1356,10 @@ h3 span {
 
 .contact-card h2 {
   font-size: clamp(2.6rem, 5vw, 4.7rem);
+}
+
+.contact-card .button-column {
+  align-items: stretch;
 }
 
 /* =========================
@@ -1339,13 +1391,6 @@ h3 span {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 60px;
-}
-
-.footer-kicker {
-  color: var(--coral);
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
 }
 
 .footer h2 {
@@ -1558,6 +1603,20 @@ h3 span {
   .brand-icon {
     width: 50px;
     height: 50px;
+  }
+
+  .choice-logo-box {
+    min-height: 95px;
+  }
+
+  .choice-logo-box img {
+    width: min(100%, 220px);
+    max-height: 100px;
+  }
+
+  .choice-logo-box.wide img {
+    width: min(100%, 330px);
+    max-height: 110px;
   }
 
   h1 {

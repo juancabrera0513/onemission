@@ -5,7 +5,6 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-grid">
         <div>
-          <p className="footer-kicker">One Big Mission</p>
           <h2>Helping people of all ages grow into the strongest, most empowered version of themselves.</h2>
         </div>
 

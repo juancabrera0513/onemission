@@ -7,7 +7,6 @@ export default function Home() {
       <section className="home-hero">
         <div className="container home-hero-grid">
           <div className="home-hero-copy">
-            <p className="eyebrow">One Big Mission</p>
             <h1>
               One Big <span>Mission</span>
             </h1>
@@ -49,7 +48,6 @@ export default function Home() {
       <section className="choice-section">
         <div className="container">
           <div className="section-heading center">
-            <p className="eyebrow">Choose Your Path</p>
             <h2>Two areas. One heart-led mission.</h2>
           </div>
 
@@ -91,7 +89,6 @@ export default function Home() {
           </div>
 
           <div>
-            <p className="eyebrow">Biography</p>
             <h2>Meet Stacey</h2>
 
             <p>

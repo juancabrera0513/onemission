@@ -7,7 +7,6 @@ export default function About() {
       <section className="about-hero-new">
         <div className="container about-hero-new-grid">
           <div className="about-hero-new-copy">
-            <p className="eyebrow">Biography</p>
             <h1>
               About <span>Stacey</span>
             </h1>
@@ -36,7 +35,6 @@ export default function About() {
       <section className="about-story-section">
         <div className="container about-story-grid">
           <div className="about-story-heading">
-            <p className="eyebrow">Her Story</p>
             <h2>
               Heart-led <span>transformation</span>
             </h2>
@@ -71,7 +69,6 @@ export default function About() {
       <section className="about-paths-section">
         <div className="container">
           <div className="section-heading center">
-            <p className="eyebrow">One Big Mission</p>
             <h2>Two ways Stacey helps people grow.</h2>
           </div>
 

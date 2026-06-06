@@ -6,7 +6,6 @@ export default function MetabolicReset() {
       <section className="sub-hero health-hero">
         <div className="container sub-hero-grid">
           <div>
-            <p className="eyebrow">Metabolic Reset Coach</p>
             <h1>
               A Life <span>of Style</span>
             </h1>
@@ -42,7 +41,6 @@ export default function MetabolicReset() {
       <section className="editorial-section">
         <div className="container editorial-grid">
           <div className="editorial-title">
-            <p className="eyebrow">What is a metabolic reset?</p>
             <h2>You are not alone.</h2>
           </div>
 
@@ -72,7 +70,6 @@ export default function MetabolicReset() {
       <section className="black-panel-section">
         <div className="container black-panel">
           <div>
-            <p className="eyebrow pink">Why say YES?</p>
             <h2>Saying yes is the moment you stop letting old patterns run your life.</h2>
           </div>
 
@@ -100,7 +97,6 @@ export default function MetabolicReset() {
       <section className="steps-section">
         <div className="container">
           <div className="section-heading center">
-            <p className="eyebrow">Here’s How It Works</p>
             <h2>Small shifts. Bigger change.</h2>
           </div>
 

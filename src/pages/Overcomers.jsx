@@ -6,7 +6,6 @@ export default function Overcomers() {
       <section className="sub-hero books-hero">
         <div className="container sub-hero-grid">
           <div>
-            <p className="eyebrow">Children’s Books</p>
             <h1>
               The <span>Overcomers</span>
             </h1>
@@ -47,7 +46,6 @@ export default function Overcomers() {
           </div>
 
           <div className="book-content">
-            <p className="eyebrow">Back cover of Flippy Description:</p>
             <h2>Flippy the Frog: More Like Me</h2>
 
             <p>
@@ -112,7 +110,6 @@ export default function Overcomers() {
       <section className="characters-section">
         <div className="container">
           <div className="section-heading center">
-            <p className="eyebrow">Characters</p>
             <h2>Lovable animal friends with gentle lessons.</h2>
           </div>
 

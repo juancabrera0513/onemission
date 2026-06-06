@@ -1,36 +1,32 @@
 :root {
-  --black: #24302f;
-  --true-black: #111817;
-
-  --cream: #fbf7ee;
-  --soft-cream: #f4efe5;
+  --black: #242424;
+  --true-black: #111111;
+  --cream: #fff9ef;
+  --soft-cream: #f7efe1;
   --white: #ffffff;
 
-  --sage: #87a96b;
-  --sage-dark: #587342;
-  --sage-soft: rgba(135, 169, 107, 0.18);
-
-  --sky: #9ed8db;
-  --sky-dark: #3e8f97;
-  --sky-soft: rgba(158, 216, 219, 0.22);
-
-  --coral: #f28f79;
-  --coral-dark: #d86d58;
-  --coral-soft: rgba(242, 143, 121, 0.2);
+  --pink: #f27cad;
+  --pink-dark: #dc5f96;
 
   --gold: #e7c65b;
+  --gold-soft: rgba(231, 198, 91, 0.22);
+
   --green: #62a744;
+  --green-soft: rgba(98, 167, 68, 0.16);
+
   --blue: #1672d8;
+  --blue-soft: rgba(22, 114, 216, 0.12);
+
   --red: #cf301f;
   --orange: #ff7a22;
 
-  --text: #24302f;
-  --muted: #687674;
-  --border: rgba(36, 48, 47, 0.14);
-  --shadow: 0 26px 80px rgba(36, 48, 47, 0.12);
+  --text: #242424;
+  --muted: #6f6a64;
+  --border: rgba(36, 36, 36, 0.14);
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.12);
 
   --container: 1180px;
-  --radius: 30px;
+  --radius: 28px;
 }
 
 * {
@@ -86,10 +82,10 @@ main {
 ========================= */
 
 .header {
-  min-height: 92px;
+  min-height: 96px;
   padding: 18px 46px;
-  background: rgba(251, 247, 238, 0.88);
-  color: var(--black);
+  background: var(--black);
+  color: var(--white);
   display: flex;
   align-items: center;
   gap: 34px;
@@ -97,8 +93,6 @@ main {
   position: sticky;
   top: 0;
   z-index: 50;
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(18px);
 }
 
 .brand {
@@ -110,10 +104,8 @@ main {
 .brand-icon {
   width: 58px;
   height: 58px;
-  border-radius: 20px 28px 20px 28px;
-  background:
-    radial-gradient(circle at 30% 20%, var(--sky), transparent 38%),
-    linear-gradient(135deg, var(--sage), var(--coral));
+  border-radius: 50% 50% 45% 45%;
+  background: var(--pink);
   color: var(--white);
   display: grid;
   place-items: center;
@@ -122,7 +114,6 @@ main {
   font-size: 1.7rem;
   font-weight: 800;
   transform: rotate(-7deg);
-  box-shadow: 0 14px 35px rgba(36, 48, 47, 0.14);
 }
 
 .brand-text strong {
@@ -133,7 +124,7 @@ main {
 
 .brand-text small {
   display: block;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.62);
   font-size: 0.74rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -148,31 +139,31 @@ main {
 }
 
 .nav a {
-  color: rgba(36, 48, 47, 0.74);
+  opacity: 0.86;
   transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 .nav a.active,
 .nav a:hover {
-  color: var(--coral-dark);
+  color: var(--pink);
+  opacity: 1;
 }
 
 .header-cta {
-  padding: 17px 27px;
-  border: 2px solid var(--sage);
-  color: var(--sage-dark);
+  padding: 18px 28px;
+  border: 2px solid var(--pink);
+  color: var(--pink);
   background: var(--white);
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  border-radius: 999px;
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .header-cta:hover {
   transform: translateY(-2px);
-  background: var(--sage-soft);
+  background: var(--cream);
 }
 
 /* =========================
@@ -183,13 +174,13 @@ main {
   margin: 0 0 14px;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: var(--coral-dark);
-  font-weight: 900;
+  color: var(--pink-dark);
+  font-weight: 800;
   font-size: 0.78rem;
 }
 
 .eyebrow.pink {
-  color: var(--coral);
+  color: var(--pink);
 }
 
 h1,
@@ -217,7 +208,7 @@ h3 {
 h1 span,
 h2 span,
 h3 span {
-  color: var(--sky-dark);
+  color: var(--pink);
   font-style: italic;
   font-weight: 500;
 }
@@ -253,7 +244,6 @@ h3 span {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.035em;
-  border-radius: 999px;
   transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
   cursor: pointer;
 }
@@ -272,20 +262,20 @@ h3 span {
 }
 
 .btn-pink {
-  background: var(--coral);
+  background: var(--pink);
   color: var(--white);
-  border-color: var(--coral);
+  border-color: var(--pink);
 }
 
 .btn-outline-pink {
   background: var(--white);
-  color: var(--sky-dark);
-  border-color: var(--sky);
+  color: var(--pink);
+  border-color: var(--pink);
 }
 
 .btn-outline-pink:hover {
-  background: var(--sky);
-  color: var(--black);
+  background: var(--pink);
+  color: var(--white);
 }
 
 .btn-outline-dark {
@@ -304,13 +294,12 @@ h3 span {
 ========================= */
 
 .home-hero {
-  min-height: calc(100vh - 92px);
+  min-height: calc(100vh - 96px);
   display: flex;
   align-items: center;
   background:
-    radial-gradient(circle at 10% 16%, var(--sage-soft), transparent 30%),
-    radial-gradient(circle at 82% 12%, var(--sky-soft), transparent 28%),
-    linear-gradient(135deg, var(--cream), var(--white));
+    radial-gradient(circle at 12% 18%, rgba(242, 124, 173, 0.18), transparent 30%),
+    linear-gradient(90deg, var(--cream), var(--white));
   padding: 90px 0;
 }
 
@@ -326,9 +315,7 @@ h3 span {
 }
 
 .home-hero-panel {
-  background:
-    radial-gradient(circle at top right, rgba(158, 216, 219, 0.15), transparent 36%),
-    var(--black);
+  background: var(--black);
   color: var(--white);
   padding: 54px;
   min-height: 440px;
@@ -336,7 +323,6 @@ h3 span {
   justify-content: center;
   flex-direction: column;
   box-shadow: var(--shadow);
-  border-radius: var(--radius);
 }
 
 .home-hero-panel p {
@@ -372,7 +358,6 @@ h3 span {
   background: var(--cream);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  border-radius: var(--radius);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -383,32 +368,20 @@ h3 span {
 .choice-card::after {
   content: "";
   position: absolute;
-  width: 280px;
-  height: 280px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
-  right: -110px;
-  bottom: -110px;
-  opacity: 0.2;
-}
-
-.choice-health {
-  background:
-    radial-gradient(circle at top left, rgba(231, 198, 91, 0.16), transparent 32%),
-    var(--cream);
+  right: -100px;
+  bottom: -100px;
+  opacity: 0.18;
 }
 
 .choice-health::after {
-  background: var(--sage);
-}
-
-.choice-books {
-  background:
-    radial-gradient(circle at top left, rgba(158, 216, 219, 0.2), transparent 32%),
-    var(--white);
+  background: var(--gold);
 }
 
 .choice-books::after {
-  background: var(--sky);
+  background: var(--green);
 }
 
 .choice-logo-box {
@@ -427,7 +400,7 @@ h3 span {
 }
 
 .card-label {
-  color: var(--coral-dark);
+  color: var(--pink-dark);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -439,7 +412,7 @@ h3 span {
   position: relative;
   z-index: 2;
   font-weight: 900;
-  border-bottom: 2px solid var(--sky-dark);
+  border-bottom: 2px solid var(--pink);
   padding-bottom: 8px;
   text-transform: uppercase;
   font-size: 0.86rem;
@@ -454,9 +427,7 @@ h3 span {
 .featured-book-section,
 .about-copy-section {
   padding: 120px 0;
-  background:
-    radial-gradient(circle at 90% 12%, var(--sky-soft), transparent 26%),
-    var(--cream);
+  background: var(--cream);
 }
 
 .about-preview-grid,
@@ -483,7 +454,6 @@ h3 span {
   height: 470px;
   object-fit: cover;
   box-shadow: var(--shadow);
-  border-radius: var(--radius);
 }
 
 .image-stack img:first-child {
@@ -511,15 +481,15 @@ h3 span {
 
 .health-hero {
   background:
-    radial-gradient(circle at 12% 12%, rgba(231, 198, 91, 0.2), transparent 30%),
-    radial-gradient(circle at 92% 10%, var(--sage-soft), transparent 24%),
+    radial-gradient(circle at 12% 12%, rgba(231, 198, 91, 0.26), transparent 30%),
+    radial-gradient(circle at 92% 10%, rgba(242, 124, 173, 0.1), transparent 24%),
     var(--cream);
 }
 
 .books-hero {
   background:
-    radial-gradient(circle at 8% 18%, var(--sage-soft), transparent 28%),
-    radial-gradient(circle at 92% 10%, var(--sky-soft), transparent 26%),
+    radial-gradient(circle at 8% 18%, rgba(98, 167, 68, 0.16), transparent 28%),
+    radial-gradient(circle at 92% 10%, rgba(22, 114, 216, 0.12), transparent 26%),
     var(--white);
 }
 
@@ -531,41 +501,54 @@ h3 span {
    LOGO FEATURES - NO BOX
 ========================= */
 
-.logo-feature,
-.logo-feature-clean,
-.alife-logo-feature,
-.overcomers-logo-feature {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-
 .logo-feature {
-  min-height: auto !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  min-height: 430px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
-.logo-feature::before,
+.logo-feature-clean {
+  position: relative;
+}
+
 .logo-feature-clean::before {
-  display: none !important;
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 999px;
+  background: rgba(242, 124, 173, 0.08);
+  filter: blur(20px);
+  z-index: 0;
 }
 
 .logo-feature img {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  object-fit: contain !important;
+  position: relative;
+  z-index: 1;
+  width: min(100%, 460px);
+  max-height: none;
+  object-fit: contain;
 }
 
 .alife-logo-feature img {
-  width: min(100%, 420px) !important;
+  width: min(100%, 430px);
 }
 
 .overcomers-logo-feature img {
-  width: min(100%, 560px) !important;
+  width: min(100%, 560px);
+  max-width: none;
+}
+
+.books-hero .logo-feature-clean::before {
+  background: rgba(22, 114, 216, 0.08);
+}
+
+.health-hero .logo-feature-clean::before {
+  background: rgba(231, 198, 91, 0.18);
 }
 
 /* =========================
@@ -577,7 +560,7 @@ h3 span {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   letter-spacing: -0.05em;
   line-height: 1.05;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .editorial-copy p {
@@ -590,12 +573,9 @@ h3 span {
 }
 
 .black-panel {
-  background:
-    radial-gradient(circle at top right, rgba(158, 216, 219, 0.14), transparent 34%),
-    var(--black);
+  background: var(--black);
   color: var(--white);
   padding: 70px;
-  border-radius: var(--radius);
 }
 
 .black-panel h2 {
@@ -619,11 +599,10 @@ h3 span {
   border: 1px solid var(--border);
   background: var(--cream);
   min-height: 300px;
-  border-radius: var(--radius);
 }
 
 .steps-grid span {
-  color: var(--coral);
+  color: var(--pink);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 3rem;
   font-weight: 800;
@@ -647,11 +626,8 @@ h3 span {
   max-width: 980px;
   margin: 0 auto;
   padding: 46px;
-  background:
-    radial-gradient(circle at top right, rgba(135, 169, 107, 0.16), transparent 34%),
-    var(--black);
+  background: var(--black);
   color: var(--white);
-  border-radius: var(--radius);
 }
 
 .book-intro-card p {
@@ -662,17 +638,15 @@ h3 span {
 .book-cover-panel {
   background:
     linear-gradient(var(--white), var(--white)) padding-box,
-    linear-gradient(135deg, var(--sage), var(--sky), var(--coral), var(--gold)) border-box;
+    linear-gradient(135deg, var(--red), var(--orange), var(--gold), var(--green), var(--blue)) border-box;
   border: 4px solid transparent;
   padding: 20px;
   box-shadow: var(--shadow);
-  border-radius: var(--radius);
 }
 
 .book-cover-panel img {
   width: 100%;
   object-fit: cover;
-  border-radius: calc(var(--radius) - 12px);
 }
 
 .book-content p {
@@ -691,8 +665,7 @@ h3 span {
   object-fit: cover;
   background: var(--white);
   border: 1px solid var(--border);
-  box-shadow: 0 18px 40px rgba(36, 48, 47, 0.08);
-  border-radius: var(--radius);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
 }
 
 /* =========================
@@ -704,7 +677,6 @@ h3 span {
   width: 100%;
   object-fit: cover;
   box-shadow: var(--shadow);
-  border-radius: var(--radius);
 }
 
 .about-copy-section p {
@@ -713,171 +685,12 @@ h3 span {
 }
 
 /* =========================
-   IMPROVED ABOUT PAGE
-========================= */
-
-.about-hero-new {
-  padding: 110px 0 90px;
-  background:
-    radial-gradient(circle at 12% 14%, var(--sky-soft), transparent 30%),
-    radial-gradient(circle at 92% 18%, var(--sage-soft), transparent 28%),
-    var(--cream);
-}
-
-.about-hero-new-grid {
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 70px;
-  align-items: center;
-}
-
-.about-hero-new-copy {
-  position: relative;
-  z-index: 2;
-}
-
-.about-hero-new-copy h1 {
-  max-width: 780px;
-}
-
-.about-hero-new-images {
-  position: relative;
-  min-height: 620px;
-}
-
-.about-main-img {
-  width: 72%;
-  height: 560px;
-  object-fit: cover;
-  margin-left: auto;
-  box-shadow: var(--shadow);
-  border-radius: var(--radius);
-}
-
-.about-floating-img {
-  position: absolute;
-  left: 0;
-  bottom: 46px;
-  width: 44%;
-  height: 330px;
-  object-fit: cover;
-  border: 12px solid var(--cream);
-  box-shadow: var(--shadow);
-  border-radius: var(--radius);
-}
-
-.about-story-section {
-  padding: 110px 0;
-  background: var(--white);
-}
-
-.about-story-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 70px;
-  align-items: start;
-}
-
-.about-story-heading {
-  position: sticky;
-  top: 140px;
-}
-
-.about-story-heading h2 {
-  font-size: clamp(3rem, 7vw, 6.5rem);
-}
-
-.about-story-card {
-  background:
-    radial-gradient(circle at top right, rgba(158, 216, 219, 0.14), transparent 34%),
-    var(--black);
-  padding: 58px;
-  color: var(--white);
-  box-shadow: var(--shadow);
-  border-radius: var(--radius);
-}
-
-.about-story-card p {
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 1.08rem;
-}
-
-.about-story-card p + p {
-  margin-top: 26px;
-}
-
-.about-paths-section {
-  padding: 110px 0;
-  background:
-    radial-gradient(circle at 12% 15%, var(--sage-soft), transparent 26%),
-    radial-gradient(circle at 90% 10%, var(--sky-soft), transparent 28%),
-    var(--cream);
-}
-
-.about-paths-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
-
-.about-path-card {
-  min-height: 440px;
-  padding: 42px;
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  border-radius: var(--radius);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.about-path-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 28px 80px rgba(36, 48, 47, 0.16);
-}
-
-.about-path-logo {
-  min-height: 130px;
-  display: flex;
-  align-items: center;
-}
-
-.about-path-logo img {
-  max-width: 310px;
-  max-height: 130px;
-  object-fit: contain;
-}
-
-.about-path-logo-small img {
-  max-width: 170px;
-  max-height: 130px;
-}
-
-.about-path-card h3 {
-  margin-top: 8px;
-}
-
-.about-path-card span {
-  width: fit-content;
-  font-weight: 900;
-  border-bottom: 2px solid var(--sky-dark);
-  padding-bottom: 8px;
-  text-transform: uppercase;
-  font-size: 0.86rem;
-}
-
-/* =========================
    CONTACT PAGE
 ========================= */
 
 .contact-hero {
   padding: 130px 0 90px;
-  background:
-    radial-gradient(circle at 12% 16%, var(--sage-soft), transparent 28%),
-    radial-gradient(circle at 88% 10%, var(--sky-soft), transparent 28%),
-    var(--cream);
+  background: var(--cream);
 }
 
 .contact-card {
@@ -886,7 +699,6 @@ h3 span {
   min-height: 420px;
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
 }
 
 .contact-card h2 {
@@ -898,9 +710,7 @@ h3 span {
 ========================= */
 
 .footer {
-  background:
-    radial-gradient(circle at 90% 12%, rgba(158, 216, 219, 0.14), transparent 28%),
-    var(--black);
+  background: var(--black);
   color: var(--white);
   padding: 70px 0;
 }
@@ -912,7 +722,7 @@ h3 span {
 }
 
 .footer-kicker {
-  color: var(--coral);
+  color: var(--pink);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.16em;
@@ -935,7 +745,7 @@ h3 span {
 }
 
 .footer-links a:hover {
-  color: var(--sky);
+  color: var(--pink);
 }
 
 /* =========================
@@ -962,10 +772,7 @@ h3 span {
   .about-page-grid,
   .black-panel,
   .contact-grid,
-  .footer-grid,
-  .about-hero-new-grid,
-  .about-story-grid,
-  .about-paths-grid {
+  .footer-grid {
     grid-template-columns: 1fr;
   }
 
@@ -998,29 +805,11 @@ h3 span {
   }
 
   .alife-logo-feature img {
-    width: min(100%, 360px) !important;
+    width: min(100%, 360px);
   }
 
   .overcomers-logo-feature img {
-    width: min(100%, 440px) !important;
-  }
-
-  .about-story-heading {
-    position: static;
-  }
-
-  .about-hero-new-images {
-    min-height: 540px;
-  }
-
-  .about-main-img {
-    width: 78%;
-    height: 500px;
-  }
-
-  .about-floating-img {
-    width: 42%;
-    height: 300px;
+    width: min(100%, 440px);
   }
 }
 
@@ -1064,10 +853,7 @@ h3 span {
   .featured-book-section,
   .steps-section,
   .characters-section,
-  .contact-options,
-  .about-hero-new,
-  .about-story-section,
-  .about-paths-section {
+  .contact-options {
     padding: 70px 0;
   }
 
@@ -1075,9 +861,7 @@ h3 span {
   .black-panel,
   .book-intro-card,
   .contact-card,
-  .choice-card,
-  .about-story-card,
-  .about-path-card {
+  .choice-card {
     padding: 30px;
   }
 
@@ -1109,34 +893,16 @@ h3 span {
     margin-top: 30px;
   }
 
+  .logo-feature-clean::before {
+    width: 260px;
+    height: 260px;
+  }
+
   .alife-logo-feature img {
-    width: min(100%, 300px) !important;
+    width: min(100%, 300px);
   }
 
   .overcomers-logo-feature img {
-    width: min(100%, 340px) !important;
-  }
-
-  .about-hero-new-images {
-    min-height: auto;
-    display: grid;
-    gap: 18px;
-  }
-
-  .about-main-img,
-  .about-floating-img {
-    position: static;
-    width: 100%;
-    height: auto;
-    border: 0;
-    margin: 0;
-  }
-
-  .about-path-logo img {
-    max-width: 260px;
-  }
-
-  .about-path-logo-small img {
-    max-width: 150px;
+    width: min(100%, 340px);
   }
 }

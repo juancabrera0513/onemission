@@ -1,11 +1,25 @@
-import { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavLink, Link, useLocation } from "react-router-dom";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hideOnOptions, setHideOnOptions] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname !== "/hero-options") {
+      return undefined;
+    }
+
+    const handleScroll = () => setHideOnOptions(window.scrollY > 48);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [location.pathname]);
 
   return (
-    <header className="header">
+    <header className={`header${location.pathname === "/hero-options" && hideOnOptions ? " header-hidden-on-options" : ""}`}>
       <Link to="/" className="brand">
         <span className="brand-icon">S</span>
         <span className="brand-text">

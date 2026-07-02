@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Allura&family=Beth+Ellen&family=Birthstone&family=Cedarville+Cursive&family=Dawning+of+a+New+Day&family=Homemade+Apple&family=Josefin+Sans:ital,wght@0,500;0,600;0,700;1,600&family=La+Belle+Aurore&family=Mea+Culpa&family=MonteCarlo&family=Mr+De+Haviland&family=Mrs+Saint+Delafield&family=Oooh+Baby&family=Quicksand:wght@400;500;600;700&family=Qwitcher+Grypen:wght@400;700&family=Reenie+Beanie&family=WindSong:wght@400;500&family=Zeyada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Beth+Ellen&family=Birthstone&family=Cedarville+Cursive&family=Dawning+of+a+New+Day&family=Herr+Von+Muellerhoff&family=Homemade+Apple&family=Italianno&family=Josefin+Sans:ital,wght@0,500;0,600;0,700;1,600&family=La+Belle+Aurore&family=Mea+Culpa&family=MonteCarlo&family=Mr+De+Haviland&family=Mrs+Saint+Delafield&family=Oooh+Baby&family=Pinyon+Script&family=Quicksand:wght@400;500;600;700&family=Qwitcher+Grypen:wght@400;700&family=Reenie+Beanie&family=Waterfall&family=WindSong:wght@400;500&family=Zeyada&display=swap");
 
 :root {
   --black: #19324a;
@@ -226,7 +226,13 @@ main {
   -webkit-backdrop-filter: blur(18px);
   transition:
     background 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.header-hidden-on-options {
+  transform: translateY(calc(-100% - 8px));
+  pointer-events: none;
 }
 
 .header::after {
@@ -1726,13 +1732,13 @@ h3 span {
 .palette-sunny .concept-home-hero .home-hero-copy h1 span { font-family: "Mr De Haviland", cursive; font-size: 1.08em; }
 .palette-green .concept-home-hero .home-hero-copy h1 span { font-family: "Mea Culpa", cursive; font-size: 0.96em; }
 .palette-sky .concept-home-hero .home-hero-copy h1 span { font-family: "Qwitcher Grypen", cursive; font-size: 1.08em; font-weight: 700; }
-.palette-mint .concept-home-hero .home-hero-copy h1 span { font-family: "La Belle Aurore", cursive; font-size: 0.84em; }
-.palette-lemon .concept-home-hero .home-hero-copy h1 span { font-family: "Oooh Baby", cursive; font-size: 0.9em; }
+.palette-mint .concept-home-hero .home-hero-copy h1 span { font-family: "Italianno", cursive; font-size: 1.02em; }
+.palette-lemon .concept-home-hero .home-hero-copy h1 span { font-family: "Herr Von Muellerhoff", cursive; font-size: 1.08em; }
 .palette-lilac .concept-home-hero .home-hero-copy h1 span { font-family: "Cedarville Cursive", cursive; font-size: 0.76em; }
 .palette-brand-gold .concept-home-hero .home-hero-copy h1 span { font-family: "Beth Ellen", cursive; font-size: 0.68em; }
-.palette-brand-mix .concept-home-hero .home-hero-copy h1 span { font-family: "Homemade Apple", cursive; font-size: 0.68em; }
-.palette-brand-gold.palette-logo-buttons .concept-home-hero .home-hero-copy h1 span { font-family: "Zeyada", cursive; font-size: 0.96em; }
-.palette-brand-bright .concept-home-hero .home-hero-copy h1 span { font-family: "Reenie Beanie", cursive; font-size: 0.94em; }
+.palette-brand-mix .concept-home-hero .home-hero-copy h1 span { font-family: "Waterfall", cursive; font-size: 1.02em; letter-spacing: -0.075em; }
+.palette-brand-gold.palette-logo-buttons .concept-home-hero .home-hero-copy h1 span { font-family: "Alex Brush", cursive; font-size: 0.9em; }
+.palette-brand-bright .concept-home-hero .home-hero-copy h1 span { font-family: "Pinyon Script", cursive; font-size: 0.9em; }
 .palette-brand-balanced .concept-home-hero .home-hero-copy h1 span { font-family: "Dawning of a New Day", cursive; font-size: 0.78em; }
 
 /* Palettes sampled from the supplied logos */

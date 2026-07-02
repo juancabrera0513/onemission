@@ -36,6 +36,7 @@ export default function Header() {
         <NavLink to="/metabolic-reset">A Life of Style</NavLink>
         <NavLink to="/the-overcomers">The Overcomers</NavLink>
         <NavLink to="/about">About</NavLink>
+        <NavLink to="/hero-options">Hero Options</NavLink>
         <NavLink to="/contact">Contact</NavLink>
       </nav>
 

@@ -7,6 +7,7 @@ import MetabolicReset from "./pages/MetabolicReset";
 import Overcomers from "./pages/Overcomers";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import HeroOptions from "./pages/HeroOptions";
 
 export default function App() {
   const location = useLocation();
@@ -104,6 +105,7 @@ export default function App() {
           <Route path="/the-overcomers" element={<Overcomers />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/hero-options" element={<HeroOptions />} />
         </Routes>
       </main>
 

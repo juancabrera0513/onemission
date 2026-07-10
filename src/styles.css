@@ -624,64 +624,72 @@ h3 span {
 }
 
 .mission-lockup {
+  --mission-main-size: clamp(3.95rem, 7.2vw, 8rem);
+  --mission-script-size: clamp(3.95rem, 6.9vw, 7.55rem);
+  --mission-script-top: -0.24em;
+  --mission-script-left: 0.08em;
+  --mission-script-scale-x: 1.06;
+  --mission-script-scale-y: 1;
+  --mission-main-color: #030303;
+  --mission-script-color: #346f12;
+  --mission-script-shadow: #e7c63c;
   width: fit-content;
   max-width: 100%;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   position: relative;
-  color: #050505;
-  font-family: "Archivo Black", "Arial Black", Impact, sans-serif;
-  font-size: clamp(4.3rem, 10.8vw, 9.8rem);
-  font-weight: 900;
-  letter-spacing: -0.025em;
+  font-size: var(--mission-main-size);
   line-height: 0.78;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .mission-title-main {
   display: block;
-  color: #050505;
-  font: inherit;
-  letter-spacing: inherit;
-  line-height: inherit;
+  color: var(--mission-main-color);
+  font-family: "Archivo Black", "Arial Black", Impact, sans-serif;
+  font-size: 1em;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 0.76;
+  text-transform: uppercase;
   text-shadow:
-    0 2px 0 #050505,
-    0 8px 24px rgba(5, 5, 5, 0.12);
+    0 1px 0 var(--mission-main-color),
+    0 14px 30px rgba(5, 5, 5, 0.13);
+  white-space: nowrap;
 }
 
 .mission-title-script {
   display: block;
-  margin: -0.36em auto 0;
+  margin: var(--mission-script-top) auto 0;
   position: relative;
   z-index: 2;
-  color: #67a900;
-  font-family: "Coldia", "Alex Brush", "Birthstone", cursive;
-  font-size: clamp(3.2rem, 9.2vw, 8rem);
+  left: var(--mission-script-left);
+  color: var(--mission-script-color);
+  font-family: var(--mission-script-font, "Coldia", "Alex Brush", "Birthstone", cursive);
+  font-size: var(--mission-script-size);
+  font-synthesis: none;
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--mission-script-weight, 700);
   letter-spacing: 0;
-  line-height: 0.86;
+  line-height: 0.82;
   text-transform: none;
+  -webkit-text-stroke: var(--mission-script-outline, 0.035em) #fffdf3;
+  paint-order: stroke fill;
   text-shadow:
-    0 2px 0 #ffffff,
-    0 -1px 0 #ffffff,
-    2px 0 0 #ffffff,
-    -2px 0 0 #ffffff,
-    0 5px 0 rgba(255, 211, 78, 0.7),
-    0 12px 22px rgba(57, 122, 63, 0.3);
-  transform: rotate(-2deg);
+    0 0.045em 0 #fffdf3,
+    0 0.105em 0 color-mix(in srgb, var(--mission-script-shadow) 82%, transparent),
+    0 0.18em 0.18em color-mix(in srgb, var(--mission-script-color) 18%, transparent);
+  transform:
+    rotate(var(--mission-script-rotate, -2deg))
+    scaleX(var(--mission-script-scale-x))
+    scaleY(var(--mission-script-scale-y));
   white-space: nowrap;
 }
 
 @media (max-width: 650px) {
   .mission-lockup {
-    font-size: clamp(3.2rem, 18vw, 5.4rem);
-    line-height: 0.82;
-  }
-
-  .mission-title-script {
-    margin-top: -0.28em;
-    font-size: clamp(2.7rem, 16vw, 4.8rem);
+    --mission-main-size: clamp(2.25rem, 13.2vw, 4.15rem);
+    --mission-script-size: clamp(2.55rem, 14vw, 4.5rem);
   }
 }
 
@@ -2878,68 +2886,6 @@ h2 {
   background: white;
   border-color: var(--preview-secondary);
   box-shadow: 0 7px 0 color-mix(in srgb, var(--preview-secondary) 28%, transparent);
-}
-
-.concept-home-hero .mission-lockup {
-  --mission-main-size: clamp(3.95rem, 7.2vw, 8rem);
-  --mission-script-size: clamp(3.95rem, 6.9vw, 7.55rem);
-  --mission-script-top: -0.24em;
-  --mission-script-left: 0.08em;
-  --mission-script-scale-x: 1.06;
-  --mission-script-scale-y: 1;
-  --mission-main-color: #030303;
-  --mission-script-color: #346f12;
-  --mission-script-shadow: #e7c63c;
-  width: fit-content;
-  max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  font-size: var(--mission-main-size);
-  line-height: 0.78;
-  text-align: center;
-}
-
-.concept-home-hero .mission-title-main {
-  display: block;
-  color: var(--mission-main-color);
-  font-family: "Archivo Black", "Arial Black", Impact, sans-serif;
-  font-size: 1em;
-  font-weight: 900;
-  letter-spacing: -0.045em;
-  line-height: 0.76;
-  text-transform: uppercase;
-  text-shadow:
-    0 1px 0 var(--mission-main-color),
-    0 14px 30px rgba(5, 5, 5, 0.13);
-  white-space: nowrap;
-}
-
-.concept-home-hero .mission-title-script {
-  display: block;
-  margin: var(--mission-script-top) auto 0;
-  position: relative;
-  z-index: 2;
-  left: var(--mission-script-left);
-  color: var(--mission-script-color);
-  font-family: var(--mission-script-font, "Coldia", "Alex Brush", "Birthstone", cursive);
-  font-size: var(--mission-script-size);
-  font-synthesis: none;
-  font-style: normal;
-  font-weight: var(--mission-script-weight, 700);
-  letter-spacing: 0;
-  line-height: 0.82;
-  text-transform: none;
-  -webkit-text-stroke: var(--mission-script-outline, 0.035em) #fffdf3;
-  paint-order: stroke fill;
-  text-shadow:
-    0 0.045em 0 #fffdf3,
-    0 0.105em 0 color-mix(in srgb, var(--mission-script-shadow) 82%, transparent),
-    0 0.18em 0.18em color-mix(in srgb, var(--mission-script-color) 18%, transparent);
-  transform:
-    rotate(var(--mission-script-rotate, -2deg))
-    scaleX(var(--mission-script-scale-x))
-    scaleY(var(--mission-script-scale-y));
-  white-space: nowrap;
 }
 
 .mission-option-01 {

@@ -7,8 +7,9 @@ export default function Home() {
       <section className="home-hero">
         <div className="container home-hero-grid">
           <div className="home-hero-copy">
-            <h1>
-              One Big <span>Mission</span>
+            <h1 className="mission-lockup mission-logo-red" aria-label="One Big Mission">
+              <span className="mission-title-main">One Big</span>
+              <span className="mission-title-script">Mission</span>
             </h1>
 
             <p className="hero-text">

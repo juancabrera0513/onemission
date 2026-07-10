@@ -2797,6 +2797,26 @@ h2 {
   --header-accent: #65a400; --header-accent-dark: #477500; --header-secondary: #e2b846; --header-bg: #fffdf5;
 }
 
+.palette-overcomers-red .preview-real-header {
+  --header-accent: #cf2300; --header-accent-dark: #9f1b00; --header-secondary: #ffd20a; --header-bg: #fffaf1;
+}
+
+.palette-overcomers-blue .preview-real-header {
+  --header-accent: #0d5bd7; --header-accent-dark: #08419d; --header-secondary: #ff7414; --header-bg: #fffaf1;
+}
+
+.palette-overcomers-orange .preview-real-header {
+  --header-accent: #ff7414; --header-accent-dark: #c64b00; --header-secondary: #0d5bd7; --header-bg: #fffaf1;
+}
+
+.palette-overcomers-yellow .preview-real-header {
+  --header-accent: #ffd20a; --header-accent-dark: #9c7a00; --header-secondary: #5c9700; --header-bg: #fffaf1;
+}
+
+.palette-overcomers-green .preview-real-header {
+  --header-accent: #5c9700; --header-accent-dark: #3f6900; --header-secondary: #ffd20a; --header-bg: #fffaf1;
+}
+
 .concept-home-hero {
   min-height: 690px;
   --preview-accent: #7657e8;
@@ -3047,6 +3067,36 @@ h2 {
   --mission-script-left: 0.08em;
 }
 
+.mission-logo-red {
+  --mission-script-color: #cf2300;
+  --mission-script-shadow: #ffd20a;
+  --mission-script-outline: 0.037em;
+}
+
+.mission-logo-blue {
+  --mission-script-color: #0d5bd7;
+  --mission-script-shadow: #ffd20a;
+  --mission-script-outline: 0.037em;
+}
+
+.mission-logo-orange {
+  --mission-script-color: #ff7414;
+  --mission-script-shadow: #ffd20a;
+  --mission-script-outline: 0.038em;
+}
+
+.mission-logo-yellow {
+  --mission-script-color: #ffd20a;
+  --mission-script-shadow: #5c9700;
+  --mission-script-outline: 0.04em;
+}
+
+.mission-logo-green {
+  --mission-script-color: #5c9700;
+  --mission-script-shadow: #ffd20a;
+  --mission-script-outline: 0.037em;
+}
+
 @media (max-width: 850px) {
   .concept-home-hero .mission-lockup {
     --mission-main-size: clamp(3.1rem, 13vw, 6.2rem);
@@ -3068,6 +3118,55 @@ h2 {
   --preview-soft: #ffffff;
   --preview-panel: #f0edff;
   --preview-shadow: rgba(118, 87, 232, 0.16);
+}
+
+.palette-overcomers-red .concept-home-hero {
+  --preview-accent: #cf2300;
+  --preview-accent-dark: #9f1b00;
+  --preview-secondary: #ffd20a;
+  --preview-soft: #fffaf1;
+  --preview-panel: #fff4de;
+  --preview-shadow: rgba(207, 35, 0, 0.15);
+}
+
+.palette-overcomers-blue .concept-home-hero {
+  --preview-accent: #0d5bd7;
+  --preview-accent-dark: #08419d;
+  --preview-secondary: #ff7414;
+  --preview-soft: #fffaf1;
+  --preview-panel: #eef5ff;
+  --preview-shadow: rgba(13, 91, 215, 0.16);
+}
+
+.palette-overcomers-orange .concept-home-hero {
+  --preview-accent: #ff7414;
+  --preview-accent-dark: #c64b00;
+  --preview-secondary: #0d5bd7;
+  --preview-soft: #fffaf1;
+  --preview-panel: #fff0df;
+  --preview-shadow: rgba(255, 116, 20, 0.16);
+}
+
+.palette-overcomers-yellow .concept-home-hero {
+  --preview-accent: #ffd20a;
+  --preview-accent-dark: #9c7a00;
+  --preview-secondary: #5c9700;
+  --preview-soft: #fffaf1;
+  --preview-panel: #fff8cf;
+  --preview-shadow: rgba(255, 210, 10, 0.2);
+}
+
+.palette-overcomers-yellow .concept-home-hero .btn-dark {
+  color: #19324a;
+}
+
+.palette-overcomers-green .concept-home-hero {
+  --preview-accent: #5c9700;
+  --preview-accent-dark: #3f6900;
+  --preview-secondary: #ffd20a;
+  --preview-soft: #fffaf1;
+  --preview-panel: #f2f9e7;
+  --preview-shadow: rgba(92, 151, 0, 0.17);
 }
 
 .palette-white-blue .concept-home-hero {

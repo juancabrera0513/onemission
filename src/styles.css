@@ -1,4 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Beth+Ellen&family=Birthstone&family=Cedarville+Cursive&family=Dawning+of+a+New+Day&family=Herr+Von+Muellerhoff&family=Homemade+Apple&family=Italianno&family=Josefin+Sans:ital,wght@0,500;0,600;0,700;1,600&family=La+Belle+Aurore&family=Mea+Culpa&family=MonteCarlo&family=Mr+De+Haviland&family=Mrs+Saint+Delafield&family=Oooh+Baby&family=Pinyon+Script&family=Quicksand:wght@400;500;600;700&family=Qwitcher+Grypen:wght@400;700&family=Reenie+Beanie&family=Waterfall&family=WindSong:wght@400;500&family=Zeyada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Archivo+Black&family=Beth+Ellen&family=Birthstone&family=Cedarville+Cursive&family=Dawning+of+a+New+Day&family=Herr+Von+Muellerhoff&family=Homemade+Apple&family=Italianno&family=Josefin+Sans:ital,wght@0,500;0,600;0,700;1,600&family=La+Belle+Aurore&family=Mea+Culpa&family=MonteCarlo&family=Mr+De+Haviland&family=Mrs+Saint+Delafield&family=Oooh+Baby&family=Pinyon+Script&family=Quicksand:wght@400;500;600;700&family=Qwitcher+Grypen:wght@400;700&family=Reenie+Beanie&family=Waterfall&family=WindSong:wght@400;500&family=Zeyada&display=swap");
+
+@font-face {
+  font-family: "Coldia";
+  src: url("/assets/fonts/Coldia-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coldia";
+  src: url("/assets/fonts/Coldia-ExtraLight.otf") format("opentype");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
 
 :root {
   --black: #19324a;
@@ -605,6 +621,68 @@ h3 span {
 
 .home-hero-copy h1 {
   max-width: 850px;
+}
+
+.mission-lockup {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  color: #050505;
+  font-family: "Archivo Black", "Arial Black", Impact, sans-serif;
+  font-size: clamp(4.3rem, 10.8vw, 9.8rem);
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 0.78;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.mission-title-main {
+  display: block;
+  color: #050505;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  text-shadow:
+    0 2px 0 #050505,
+    0 8px 24px rgba(5, 5, 5, 0.12);
+}
+
+.mission-title-script {
+  display: block;
+  margin: -0.36em auto 0;
+  position: relative;
+  z-index: 2;
+  color: #67a900;
+  font-family: "Coldia", "Alex Brush", "Birthstone", cursive;
+  font-size: clamp(3.2rem, 9.2vw, 8rem);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.86;
+  text-transform: none;
+  text-shadow:
+    0 2px 0 #ffffff,
+    0 -1px 0 #ffffff,
+    2px 0 0 #ffffff,
+    -2px 0 0 #ffffff,
+    0 5px 0 rgba(255, 211, 78, 0.7),
+    0 12px 22px rgba(57, 122, 63, 0.3);
+  transform: rotate(-2deg);
+  white-space: nowrap;
+}
+
+@media (max-width: 650px) {
+  .mission-lockup {
+    font-size: clamp(3.2rem, 18vw, 5.4rem);
+    line-height: 0.82;
+  }
+
+  .mission-title-script {
+    margin-top: -0.28em;
+    font-size: clamp(2.7rem, 16vw, 4.8rem);
+  }
 }
 
 .home-hero-copy,
@@ -1724,22 +1802,7 @@ h3 span {
   }
 }
 
-/* Script personality per concept */
-.palette-white-violet .concept-home-hero .home-hero-copy h1 span { font-family: "Birthstone", cursive; }
-.palette-white-blue .concept-home-hero .home-hero-copy h1 span { font-family: "MonteCarlo", cursive; }
-.palette-turquoise .concept-home-hero .home-hero-copy h1 span { font-family: "WindSong", cursive; font-size: 0.94em; }
-.palette-lavender .concept-home-hero .home-hero-copy h1 span { font-family: "Mrs Saint Delafield", cursive; font-size: 1.08em; }
-.palette-sunny .concept-home-hero .home-hero-copy h1 span { font-family: "Mr De Haviland", cursive; font-size: 1.08em; }
-.palette-green .concept-home-hero .home-hero-copy h1 span { font-family: "Mea Culpa", cursive; font-size: 0.96em; }
-.palette-sky .concept-home-hero .home-hero-copy h1 span { font-family: "Qwitcher Grypen", cursive; font-size: 1.08em; font-weight: 700; }
-.palette-mint .concept-home-hero .home-hero-copy h1 span { font-family: "Italianno", cursive; font-size: 1.02em; }
-.palette-lemon .concept-home-hero .home-hero-copy h1 span { font-family: "Herr Von Muellerhoff", cursive; font-size: 1.08em; }
-.palette-lilac .concept-home-hero .home-hero-copy h1 span { font-family: "Cedarville Cursive", cursive; font-size: 0.76em; }
-.palette-brand-gold .concept-home-hero .home-hero-copy h1 span { font-family: "Beth Ellen", cursive; font-size: 0.68em; }
-.palette-brand-mix .concept-home-hero .home-hero-copy h1 span { font-family: "Waterfall", cursive; font-size: 1.02em; letter-spacing: -0.075em; }
-.palette-brand-gold.palette-logo-buttons .concept-home-hero .home-hero-copy h1 span { font-family: "Alex Brush", cursive; font-size: 0.9em; }
-.palette-brand-bright .concept-home-hero .home-hero-copy h1 span { font-family: "Pinyon Script", cursive; font-size: 0.9em; }
-.palette-brand-balanced .concept-home-hero .home-hero-copy h1 span { font-family: "Dawning of a New Day", cursive; font-size: 0.78em; }
+/* The client liked Coldia's bold weight, so every option keeps that same hand. */
 
 /* Palettes sampled from the supplied logos */
 .palette-brand-gold .concept-home-hero {
@@ -1959,10 +2022,16 @@ h3 span {
   color: var(--coral-dark);
 }
 
-.home-hero-copy h1 span {
+.home-hero-copy .mission-title-script {
   position: relative;
-  color: var(--coral-dark);
-  text-shadow: 4px 4px 0 rgba(255, 211, 78, 0.65);
+  color: #65a400;
+  text-shadow:
+    0 2px 0 #ffffff,
+    0 -1px 0 #ffffff,
+    2px 0 0 #ffffff,
+    -2px 0 0 #ffffff,
+    0 5px 0 rgba(255, 211, 78, 0.7),
+    0 12px 22px rgba(57, 122, 63, 0.3);
 }
 
 .home-hero-panel,
@@ -2107,8 +2176,13 @@ h3 span {
     background: rgba(255, 249, 236, 0.98);
   }
 
-  .home-hero-copy h1 span {
-    text-shadow: 3px 3px 0 rgba(255, 211, 78, 0.65);
+  .home-hero-copy .mission-title-script {
+    text-shadow:
+      0 2px 0 #ffffff,
+      0 -1px 0 #ffffff,
+      2px 0 0 #ffffff,
+      -2px 0 0 #ffffff,
+      0 4px 0 rgba(255, 211, 78, 0.65);
   }
 }
 
@@ -2617,18 +2691,10 @@ h2 {
 }
 
 /* Faithful color-only hero comparisons */
-.home-hero-copy h1 span,
-.concept-home-hero .home-hero-copy h1 span {
-  display: inline-block;
-  margin-left: 0.02em;
-  font-family: "Birthstone", cursive;
-  font-size: 1.12em;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: -0.055em;
-  line-height: 0.72;
+.home-hero-copy .mission-title-script,
+.concept-home-hero .home-hero-copy .mission-title-script {
+  display: block;
   white-space: nowrap;
-  transform: translateY(0.06em) rotate(-2deg);
 }
 
 .preview-real-header {
@@ -2753,9 +2819,15 @@ h2 {
   background: var(--preview-secondary);
 }
 
-.concept-home-hero .home-hero-copy h1 span {
+.concept-home-hero .home-hero-copy .mission-title-script {
   color: var(--preview-accent-dark);
-  text-shadow: 4px 4px 0 color-mix(in srgb, var(--preview-secondary) 45%, transparent);
+  text-shadow:
+    0 2px 0 #ffffff,
+    0 -1px 0 #ffffff,
+    2px 0 0 #ffffff,
+    -2px 0 0 #ffffff,
+    0 5px 0 color-mix(in srgb, var(--preview-secondary) 56%, transparent),
+    0 12px 22px color-mix(in srgb, var(--preview-accent-dark) 26%, transparent);
 }
 
 .concept-home-hero .home-hero-panel {
@@ -2786,6 +2858,207 @@ h2 {
   background: white;
   border-color: var(--preview-secondary);
   box-shadow: 0 7px 0 color-mix(in srgb, var(--preview-secondary) 28%, transparent);
+}
+
+.concept-home-hero .mission-lockup {
+  --mission-main-size: clamp(3.95rem, 7.2vw, 8rem);
+  --mission-script-size: clamp(3.95rem, 6.9vw, 7.55rem);
+  --mission-script-top: -0.24em;
+  --mission-script-left: 0.08em;
+  --mission-script-scale-x: 1.06;
+  --mission-script-scale-y: 1;
+  --mission-main-color: #030303;
+  --mission-script-color: #346f12;
+  --mission-script-shadow: #e7c63c;
+  width: fit-content;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: var(--mission-main-size);
+  line-height: 0.78;
+  text-align: center;
+}
+
+.concept-home-hero .mission-title-main {
+  display: block;
+  color: var(--mission-main-color);
+  font-family: "Archivo Black", "Arial Black", Impact, sans-serif;
+  font-size: 1em;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 0.76;
+  text-transform: uppercase;
+  text-shadow:
+    0 1px 0 var(--mission-main-color),
+    0 14px 30px rgba(5, 5, 5, 0.13);
+  white-space: nowrap;
+}
+
+.concept-home-hero .mission-title-script {
+  display: block;
+  margin: var(--mission-script-top) auto 0;
+  position: relative;
+  z-index: 2;
+  left: var(--mission-script-left);
+  color: var(--mission-script-color);
+  font-family: var(--mission-script-font, "Coldia", "Alex Brush", "Birthstone", cursive);
+  font-size: var(--mission-script-size);
+  font-synthesis: none;
+  font-style: normal;
+  font-weight: var(--mission-script-weight, 700);
+  letter-spacing: 0;
+  line-height: 0.82;
+  text-transform: none;
+  -webkit-text-stroke: var(--mission-script-outline, 0.035em) #fffdf3;
+  paint-order: stroke fill;
+  text-shadow:
+    0 0.045em 0 #fffdf3,
+    0 0.105em 0 color-mix(in srgb, var(--mission-script-shadow) 82%, transparent),
+    0 0.18em 0.18em color-mix(in srgb, var(--mission-script-color) 18%, transparent);
+  transform:
+    rotate(var(--mission-script-rotate, -2deg))
+    scaleX(var(--mission-script-scale-x))
+    scaleY(var(--mission-script-scale-y));
+  white-space: nowrap;
+}
+
+.mission-option-01 {
+  --mission-script-font: "Coldia", "Alex Brush", cursive;
+  --mission-script-color: #397a13;
+  --mission-script-shadow: #ffcb08;
+}
+
+.mission-option-02 {
+  --mission-script-font: "Coldia", "Alex Brush", cursive;
+  --mission-script-color: #397a13;
+  --mission-script-shadow: #ffd34e;
+  --mission-script-left: 0.05em;
+  --mission-script-scale-x: 1.04;
+}
+
+.mission-option-03 {
+  --mission-script-font: "Coldia", "Alex Brush", cursive;
+  --mission-script-color: #4c8f12;
+  --mission-script-shadow: #e2b846;
+  --mission-script-top: -0.21em;
+  --mission-script-scale-x: 1.08;
+}
+
+.mission-option-04 {
+  --mission-script-font: "Coldia", "Alex Brush", cursive;
+  --mission-script-color: #2f6f10;
+  --mission-script-shadow: #ffcb08;
+  --mission-script-top: -0.27em;
+  --mission-script-left: 0.12em;
+}
+
+.mission-option-05 {
+  --mission-script-font: "Coldia", "Alex Brush", cursive;
+  --mission-script-color: #477500;
+  --mission-script-shadow: #e2b846;
+  --mission-script-size: clamp(4rem, 6.95vw, 7.6rem);
+  --mission-script-scale-y: 1;
+}
+
+.mission-option-06 {
+  --mission-main-color: #020202;
+  --mission-script-font: "Coldia", "Alex Brush", cursive;
+  --mission-script-color: #397a13;
+  --mission-script-shadow: #f0c834;
+  --mission-script-size: clamp(3.9rem, 6.8vw, 7.45rem);
+  --mission-script-left: 0.12em;
+}
+
+.mission-option-07 {
+  --mission-script-font: "Coldia", "Alex Brush", cursive;
+  --mission-script-color: #386f15;
+  --mission-script-shadow: #ffd34e;
+  --mission-script-size: clamp(4rem, 6.95vw, 7.6rem);
+  --mission-script-top: -0.3em;
+  --mission-script-scale-x: 1.04;
+}
+
+.mission-option-08 {
+  --mission-script-font: "Coldia", "Alex Brush", cursive;
+  --mission-script-color: #4a850f;
+  --mission-script-shadow: #f4c52c;
+  --mission-script-size: clamp(3.95rem, 6.85vw, 7.5rem);
+  --mission-script-scale-x: 1.1;
+}
+
+.mission-option-09 {
+  --mission-script-font: "Coldia", "Alex Brush", cursive;
+  --mission-script-color: #27672f;
+  --mission-script-shadow: #ffd34e;
+  --mission-script-size: clamp(3.9rem, 6.8vw, 7.45rem);
+  --mission-script-top: -0.19em;
+}
+
+.mission-option-10 {
+  --mission-script-font: "Coldia", "Alex Brush", cursive;
+  --mission-script-color: #397a13;
+  --mission-script-shadow: #ffd34e;
+  --mission-script-size: clamp(4.05rem, 7vw, 7.65rem);
+  --mission-script-top: -0.31em;
+  --mission-script-scale-y: 1;
+}
+
+.mission-option-11 {
+  --mission-script-font: "Coldia", "Alex Brush", cursive;
+  --mission-script-color: #326c12;
+  --mission-script-shadow: #e9bd30;
+  --mission-script-left: 0;
+  --mission-script-scale-x: 1.08;
+}
+
+.mission-option-12 {
+  --mission-script-font: "Coldia", "Alex Brush", cursive;
+  --mission-script-color: #477500;
+  --mission-script-shadow: #ffcb08;
+  --mission-script-size: clamp(3.95rem, 6.9vw, 7.55rem);
+  --mission-script-top: -0.25em;
+  --mission-script-rotate: -1deg;
+}
+
+.mission-option-13 {
+  --mission-script-font: "Coldia", "Alex Brush", cursive;
+  --mission-script-color: #397a13;
+  --mission-script-shadow: #d9aa1c;
+  --mission-script-size: clamp(3.9rem, 6.8vw, 7.45rem);
+  --mission-script-top: -0.18em;
+  --mission-script-scale-x: 1.12;
+}
+
+.mission-option-14 {
+  --mission-script-font: "Coldia", "Alex Brush", cursive;
+  --mission-script-color: #5e8d11;
+  --mission-script-shadow: #f2d46e;
+  --mission-script-size: clamp(3.9rem, 6.8vw, 7.45rem);
+  --mission-script-top: -0.24em;
+  --mission-script-left: 0.14em;
+}
+
+.mission-option-15 {
+  --mission-script-font: "Coldia", "Alex Brush", cursive;
+  --mission-script-color: #397a13;
+  --mission-script-shadow: #ffcb08;
+  --mission-script-size: clamp(4.05rem, 7vw, 7.65rem);
+  --mission-script-top: -0.33em;
+  --mission-script-left: 0.08em;
+}
+
+@media (max-width: 850px) {
+  .concept-home-hero .mission-lockup {
+    --mission-main-size: clamp(3.1rem, 13vw, 6.2rem);
+    --mission-script-size: clamp(3rem, 12vw, 5.8rem);
+  }
+}
+
+@media (max-width: 560px) {
+  .concept-home-hero .mission-lockup {
+    --mission-main-size: clamp(2.25rem, 13.2vw, 4.15rem);
+    --mission-script-size: clamp(2.55rem, 14vw, 4.5rem);
+  }
 }
 
 .palette-white-violet .concept-home-hero {

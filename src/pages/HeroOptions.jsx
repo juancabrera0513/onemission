@@ -2,21 +2,21 @@ import { Link, NavLink } from "react-router-dom";
 import { assets } from "../data/content";
 
 const concepts = [
-  { id: "01", className: "palette-white-violet" },
-  { id: "02", className: "palette-white-blue" },
-  { id: "03", className: "palette-brand-gold palette-logo-buttons", logoButtons: true },
-  { id: "04", className: "palette-brand-bright palette-logo-buttons", logoButtons: true },
-  { id: "05", className: "palette-brand-balanced palette-logo-buttons", logoButtons: true },
-  { id: "06", className: "palette-turquoise" },
-  { id: "07", className: "palette-lavender" },
-  { id: "08", className: "palette-sunny" },
-  { id: "09", className: "palette-green" },
-  { id: "10", className: "palette-sky" },
-  { id: "11", className: "palette-mint" },
-  { id: "12", className: "palette-lemon" },
-  { id: "13", className: "palette-lilac" },
-  { id: "14", className: "palette-brand-gold" },
-  { id: "15", className: "palette-brand-mix" },
+  { id: "01", className: "palette-white-violet", lockupClass: "mission-option-01" },
+  { id: "02", className: "palette-white-blue", lockupClass: "mission-option-02" },
+  { id: "03", className: "palette-brand-gold palette-logo-buttons", lockupClass: "mission-option-03", logoButtons: true },
+  { id: "04", className: "palette-brand-bright palette-logo-buttons", lockupClass: "mission-option-04", logoButtons: true },
+  { id: "05", className: "palette-brand-balanced palette-logo-buttons", lockupClass: "mission-option-05", logoButtons: true },
+  { id: "06", className: "palette-turquoise", lockupClass: "mission-option-06" },
+  { id: "07", className: "palette-lavender", lockupClass: "mission-option-07" },
+  { id: "08", className: "palette-sunny", lockupClass: "mission-option-08" },
+  { id: "09", className: "palette-green", lockupClass: "mission-option-09" },
+  { id: "10", className: "palette-sky", lockupClass: "mission-option-10" },
+  { id: "11", className: "palette-mint", lockupClass: "mission-option-11" },
+  { id: "12", className: "palette-lemon", lockupClass: "mission-option-12" },
+  { id: "13", className: "palette-lilac", lockupClass: "mission-option-13" },
+  { id: "14", className: "palette-brand-gold", lockupClass: "mission-option-14" },
+  { id: "15", className: "palette-brand-mix", lockupClass: "mission-option-15" },
 ];
 
 function PreviewHeader() {
@@ -52,7 +52,10 @@ function RealHeroPreview({ concept }) {
         <section className="home-hero concept-home-hero">
           <div className="container home-hero-grid">
             <div className="home-hero-copy">
-              <h1>One Big <span>Mission</span></h1>
+              <h1 className={`mission-lockup ${concept.lockupClass}`} aria-label="One Big Mission">
+                <span className="mission-title-main">One Big</span>
+                <span className="mission-title-script">Mission</span>
+              </h1>
               <p className="hero-text">
                 Sometimes our mission doesn’t make sense, or it feels fractured like
                 the parts of us that need healing. My One Big Mission is to bring all

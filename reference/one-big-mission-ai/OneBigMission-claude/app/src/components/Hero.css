@@ -1,0 +1,277 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* The scroll cue is a flow sibling of the content block, so the gap here is
+     what separates them -- it can never overlap the CTAs. */
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
+  background: var(--paper);
+}
+
+/*
+ * Two soft light sources borrowed from the artwork: warm sunrise low-left,
+ * cool sky high-right. Kept very low contrast so the mark stays the subject.
+ */
+.hero__wash {
+  position: absolute;
+  inset: -20%;
+  z-index: -2;
+  background:
+    radial-gradient(
+      42% 38% at 20% 78%,
+      color-mix(in oklab, var(--amber) 11%, transparent),
+      transparent 70%
+    ),
+    radial-gradient(
+      46% 42% at 84% 20%,
+      color-mix(in oklab, var(--sky) 16%, transparent),
+      transparent 72%
+    ),
+    radial-gradient(
+      60% 55% at 50% 4%,
+      color-mix(in oklab, var(--navy) 4%, transparent),
+      transparent 68%
+    );
+  animation: wash-drift 24s ease-in-out infinite alternate;
+}
+
+@keyframes wash-drift {
+  from {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.08) translate3d(1.5%, -1.5%, 0);
+  }
+}
+
+/* Paper tooth -- keeps the large flat areas from banding. */
+.hero__grain {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.18'/%3E%3C/svg%3E");
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.875rem, 1.75vw, 1.5rem);
+  width: 100%;
+  max-width: min(92vw, 46rem);
+  text-align: center;
+}
+
+/* The lockup is square, so it also has to be capped against the viewport
+   height -- the `svh` term is what keeps the whole hero inside one screen.
+   It lives on its own wrapper so it never constrains the copy or the CTAs. */
+.hero__lockup {
+  width: min(100%, 58svh);
+}
+
+.hero__eyebrow {
+  max-width: 28rem;
+  margin: 0;
+  font-size: clamp(0.68rem, 1.1vw, 0.8rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-wrap: balance;
+  color: var(--navy-soft);
+  animation: hero-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Inline rather than a flex sibling so it stays attached to the first word
+   when the line wraps on narrow screens. */
+.hero__eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  margin-right: 0.7em;
+  vertical-align: 0.15em;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+.hero__lede {
+  max-width: 34rem;
+  margin: 0;
+  font-size: clamp(0.95rem, 1.5vw, 1.075rem);
+  line-height: 1.6;
+  color: var(--ink-soft);
+  text-wrap: pretty;
+  animation: hero-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1.75s both;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  animation: hero-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1.9s both;
+}
+
+.button {
+  --shadow-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.875rem;
+  padding: 0 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+}
+
+.button--primary {
+  background: var(--navy);
+  color: var(--paper);
+  box-shadow: 0 6px 20px -8px color-mix(in oklab, var(--navy) 70%, transparent);
+}
+
+.button--primary:hover {
+  background: color-mix(in oklab, var(--navy) 88%, var(--sky));
+  box-shadow: 0 12px 28px -10px color-mix(in oklab, var(--navy) 75%, transparent);
+}
+
+.button--ghost {
+  border-color: color-mix(in oklab, var(--navy) 22%, transparent);
+  background: color-mix(in oklab, var(--paper) 70%, transparent);
+  color: var(--navy);
+  backdrop-filter: blur(6px);
+}
+
+.button--ghost:hover {
+  border-color: color-mix(in oklab, var(--navy) 45%, transparent);
+  background: color-mix(in oklab, var(--paper) 92%, transparent);
+}
+
+.hero__scroll {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--navy-soft);
+  text-decoration: none;
+  animation: hero-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) 2.1s both;
+}
+
+.hero__scroll:hover {
+  color: var(--navy);
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 1.75rem;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--navy) 45%, transparent),
+    transparent
+  );
+  animation: scroll-cue 2.4s ease-in-out infinite;
+  transform-origin: top;
+}
+
+@keyframes scroll-cue {
+  0%,
+  100% {
+    scale: 1 0.45;
+    opacity: 0.5;
+  }
+  50% {
+    scale: 1 1;
+    opacity: 1;
+  }
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    translate: 0 12px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* On a short window the square lockup is what runs the hero out of room, so
+   give it a smaller share of the height rather than dropping the copy. */
+@media (max-height: 800px) {
+  .hero__lockup {
+    width: min(100%, 48svh);
+  }
+}
+
+/* Below this there is no share that works -- drop the supporting line and the
+   scroll cue instead of clipping the mark. */
+@media (max-height: 620px) {
+  .hero__lede,
+  .hero__scroll {
+    display: none;
+  }
+}
+
+@media (max-width: 30rem) {
+  .hero__actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__wash,
+  .hero__eyebrow,
+  .hero__lede,
+  .hero__actions,
+  .hero__scroll,
+  .hero__scroll-line {
+    animation: none;
+    opacity: 1;
+    translate: none;
+    transform: none;
+  }
+
+  .button:hover {
+    transform: none;
+  }
+}

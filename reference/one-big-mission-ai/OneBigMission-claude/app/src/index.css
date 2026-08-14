@@ -1,0 +1,66 @@
+/* Palette sampled directly from the logo artwork. */
+:root {
+  --navy: #011953;
+  --navy-soft: #3b4c74;
+  --forest: #376315;
+  --leaf: #1b5f25;
+  --coral: #f9686e;
+  --amber: #f4a409;
+  --sky: #a9cbe8;
+  --paper: #fdfcfa;
+  --ink: #16233d;
+  --ink-soft: #4a5468;
+
+  font-family:
+    'Manrope',
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+  color-scheme: light;
+  color: var(--ink);
+  background-color: var(--paper);
+
+  font-synthesis-weight: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+}
+
+img {
+  max-width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

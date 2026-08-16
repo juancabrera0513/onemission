@@ -4180,6 +4180,47 @@ body {
   animation: mission-layer-in 0.65s cubic-bezier(0.22, 1, 0.36, 1) var(--layer-delay) both;
 }
 
+.mission-logo-stage--v2 {
+  overflow: hidden;
+  background: #fff;
+}
+
+.mission-logo-v2-layer {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
+  clip-path: var(--mission-clip);
+  mix-blend-mode: normal;
+  pointer-events: none;
+  animation: mission-v2-layer-in 0.55s ease-out var(--layer-delay) both;
+}
+
+.mission-logo-v2-layer--arch {
+  animation:
+    mission-v2-layer-in 0.55s ease-out var(--layer-delay) both,
+    mission-v2-arch-breathe 8s ease-in-out calc(var(--layer-delay) + 0.7s) infinite;
+}
+
+.mission-logo-v2-layer--health-scene {
+  animation:
+    mission-v2-layer-in 0.55s ease-out var(--layer-delay) both,
+    mission-v2-health-glow 6.6s ease-in-out calc(var(--layer-delay) + 0.7s) infinite;
+}
+
+.mission-logo-v2-layer--book-scene {
+  animation:
+    mission-v2-layer-in 0.55s ease-out var(--layer-delay) both,
+    mission-v2-book-glow 5.9s ease-in-out calc(var(--layer-delay) + 0.7s) infinite;
+}
+
+.mission-logo-stage--v2:hover .mission-logo-v2-layer--health-scene,
+.mission-logo-stage--v2:hover .mission-logo-v2-layer--book-scene {
+  filter: saturate(1.06) drop-shadow(0 10px 10px rgba(8, 37, 87, 0.08));
+}
+
 .mission-logo-layer--woman,
 .mission-logo-layer--children-books,
 .mission-logo-layer--botanical,
@@ -4290,6 +4331,25 @@ body {
     opacity: 0;
     transform: translateY(7px) scale(0.995);
   }
+}
+
+@keyframes mission-v2-arch-breathe {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.025); }
+}
+
+@keyframes mission-v2-layer-in {
+  from { opacity: 0; }
+}
+
+@keyframes mission-v2-health-glow {
+  0%, 100% { filter: saturate(1) brightness(1); }
+  50% { filter: saturate(1.035) brightness(1.012); }
+}
+
+@keyframes mission-v2-book-glow {
+  0%, 100% { filter: saturate(1) brightness(1); }
+  50% { filter: saturate(1.045) brightness(1.018); }
 }
 
 @keyframes mission-float-left {

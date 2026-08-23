@@ -91,6 +91,7 @@ button {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -1260,8 +1261,7 @@ h3 span {
 
 .book-cover-panel img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: calc(var(--radius) - 12px);
 }
 
@@ -1286,8 +1286,7 @@ h3 span {
 .character-grid img {
   width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: contain;
-  object-position: center;
+  object-fit: cover;
   background: var(--white);
   border: 1px solid var(--border);
   box-shadow: 0 18px 40px rgba(36, 48, 47, 0.08);
@@ -5535,6 +5534,26 @@ body {
 
 .black-panel {
   gap: clamp(30px, 4vw, 52px);
+}
+
+/* Keep the Overcomers introduction compact on desktop and tablet. */
+.sub-hero.books-hero {
+  display: block;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: clamp(42px, 5vw, 64px) 0;
+}
+
+.books-hero > .overcomers-hero-layout {
+  height: auto !important;
+  min-height: 0 !important;
+  justify-content: flex-start;
+  gap: clamp(20px, 3vw, 34px);
+}
+
+.books-hero .overcomers-logo-feature {
+  flex: 0 0 auto;
+  transform: none !important;
 }
 
 @media (max-width: 1050px) {

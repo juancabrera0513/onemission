@@ -4,11 +4,19 @@ export default function MetabolicReset() {
   return (
     <>
       <section className="sub-hero health-hero">
-        <div className="container sub-hero-grid">
-          <div>
-            <h1>
-              A Life <span>of Style</span>
-            </h1>
+        <div className="container health-hero-content">
+          <div className="logo-feature logo-feature-clean alife-logo-feature health-hero-logo">
+            <img
+              src={assets.alifeLogo}
+              alt="A Life of Style logo"
+              width="500"
+              height="500"
+              decoding="async"
+              fetchPriority="high"
+            />
+          </div>
+
+          <div className="health-hero-actions">
             <p className="hero-text">Let’s reset your metabolism:</p>
 
             <div className="button-row">
@@ -16,7 +24,7 @@ export default function MetabolicReset() {
                 href={links.preCallAssessment}
                 target="_blank"
                 rel="noreferrer"
-                className="btn btn-dark"
+                className="btn btn-precall"
               >
                 Pre-Call Assessment
               </a>
@@ -25,16 +33,13 @@ export default function MetabolicReset() {
                 href={links.metabolicScan}
                 target="_blank"
                 rel="noreferrer"
-                className="btn btn-outline-dark"
+                className="btn btn-metabolic"
               >
                 Metabolic Scan
               </a>
             </div>
           </div>
 
-          <div className="logo-feature logo-feature-clean alife-logo-feature">
-            <img src={assets.alifeLogo} alt="A Life of Style logo" />
-          </div>
         </div>
       </section>
 
@@ -102,21 +107,21 @@ export default function MetabolicReset() {
 
           <div className="steps-grid">
             <article>
-              <span>01</span>
+              <span>Step 1</span>
               <h3>Pre-Call Assessment</h3>
-              <p>Start with the health evaluation so the next step is clear.</p>
+              <p>Start with the health evaluation so the next step is&nbsp;clear.</p>
             </article>
 
             <article>
-              <span>02</span>
+              <span>Step 2</span>
               <h3>Metabolic Scan</h3>
-              <p>Answer a few questions and get a metabolic assessment in your inbox today.</p>
+              <p>Answer a few questions and get a metabolic assessment in your inbox&nbsp;today.</p>
             </article>
 
             <article>
-              <span>03</span>
+              <span>Step 3</span>
               <h3>Reset Your Metabolism</h3>
-              <p>Build simple habits that support your health-span and lifespan.</p>
+              <p>Build simple habits that support your health-span and&nbsp;lifespan.</p>
             </article>
           </div>
         </div>

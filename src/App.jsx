@@ -14,9 +14,11 @@ export default function App() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
 
-    const revealTargets = document.querySelectorAll(
-      "main section, .choice-card, .steps-grid article, .character-grid img, .about-path-card, .contact-card"
+    const sections = Array.from(document.querySelectorAll("main section"));
+    const delayedTargets = document.querySelectorAll(
+      ".choice-card, .steps-grid article, .about-path-card, .contact-card"
     );
+    const revealTargets = [...new Set([...sections.slice(1), ...delayedTargets])];
     const parallaxTargets = document.querySelectorAll(
       ".home-hero-copy, .home-hero-panel, .image-stack, .logo-feature, .book-cover-panel, .about-hero-new-images"
     );

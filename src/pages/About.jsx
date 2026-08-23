@@ -12,7 +12,7 @@ export default function About() {
             </h1>
 
             <p className="hero-text">
-              Metabolic Reset Coach, storyteller, and creative strategist.
+              Metabolic Health Coaching, storytelling, and creative strategy.
             </p>
           </div>
 
@@ -42,7 +42,7 @@ export default function About() {
 
           <div className="about-story-card">
             <p>
-              Stacey is a Metabolic Reset Coach, storyteller, and creative
+              Stacey is a metabolic health coach, storyteller, and creative
               strategist who believes in the power of heart-led transformation.
               With a background in health and wellness, English Literature, and
               a gift for hearing the story under the surface, she brings a
@@ -69,34 +69,29 @@ export default function About() {
       <section className="about-paths-section">
         <div className="container">
           <div className="section-heading center">
-            <h2>Two ways Stacey helps people grow.</h2>
+            <h2 className="about-paths-title">
+              <span>Two avenues. One mission.</span>
+              <span>Helping people grow.</span>
+            </h2>
           </div>
 
-          <div className="about-paths-grid">
-            <Link to="/metabolic-reset" className="about-path-card">
-              <div className="about-path-logo about-path-logo-small">
+          <div className="choice-grid">
+            <Link to="/metabolic-reset" className="choice-card choice-health">
+              <p className="card-label">Metabolic Health Coaching</p>
+              <div className="choice-logo-box">
                 <img src={assets.alifeLogo} alt="A Life of Style logo" />
               </div>
 
-              <div>
-                <p className="card-label">Metabolic Reset Coach</p>
-                <h3>A Life of Style</h3>
-              </div>
-
-              <span>Explore Metabolic Coaching</span>
+              <span className="choice-link">Explore Metabolic Coaching</span>
             </Link>
 
-            <Link to="/the-overcomers" className="about-path-card">
-              <div className="about-path-logo">
+            <Link to="/the-overcomers" className="choice-card choice-books">
+              <p className="card-label">Children’s Books</p>
+              <div className="choice-logo-box wide">
                 <img src={assets.overcomersLogo} alt="The Overcomers logo" />
               </div>
 
-              <div>
-                <p className="card-label">Children’s Books</p>
-                <h3>The Overcomers</h3>
-              </div>
-
-              <span>Explore The Books</span>
+              <span className="choice-link">Explore The Books</span>
             </Link>
           </div>
         </div>

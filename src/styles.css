@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Archivo+Black&family=Beth+Ellen&family=Birthstone&family=Cedarville+Cursive&family=Dawning+of+a+New+Day&family=Herr+Von+Muellerhoff&family=Homemade+Apple&family=Italianno&family=Josefin+Sans:ital,wght@0,500;0,600;0,700;1,600&family=La+Belle+Aurore&family=Mea+Culpa&family=MonteCarlo&family=Mr+De+Haviland&family=Mrs+Saint+Delafield&family=Oooh+Baby&family=Pinyon+Script&family=Quicksand:wght@400;500;600;700&family=Qwitcher+Grypen:wght@400;700&family=Reenie+Beanie&family=Waterfall&family=WindSong:wght@400;500&family=Zeyada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Archivo+Black&family=Birthstone&family=Josefin+Sans:ital,wght@0,500;0,600;0,700;1,600&family=Poppins:wght@900&family=Quicksand:wght@400;500;600;700&display=swap");
 
 @font-face {
   font-family: "Coldia";
@@ -24,28 +24,39 @@
   --soft-cream: #fff1d2;
   --white: #ffffff;
 
-  --sage: #88a963;
-  --sage-dark: #346326;
-  --sage-soft: rgba(136, 169, 99, 0.22);
+  --sage: #6a704a;
+  --sage-dark: #6a704a;
+  --sage-soft: rgba(106, 112, 74, 0.22);
 
   --sky: #b8d9ed;
   --sky-dark: #2b6f99;
   --sky-soft: rgba(184, 217, 237, 0.36);
 
-  --coral: #f05266;
-  --coral-dark: #be3147;
-  --coral-soft: rgba(240, 82, 102, 0.16);
+  --coral: #6a704a;
+  --coral-dark: #6a704a;
+  --coral-soft: rgba(106, 112, 74, 0.16);
 
   --gold: #efa823;
-  --green: #346326;
+  --green: #6a704a;
   --blue: #2b6f99;
-  --red: #f05266;
+  --red: #6a704a;
   --orange: #c97500;
 
-  --text: #082557;
+  --text: #6a704a;
   --muted: #506274;
   --border: rgba(8, 37, 87, 0.14);
   --shadow: 0 26px 70px rgba(8, 37, 87, 0.13);
+
+  /* Shared button palette: edit these values to update every CTA. */
+  --button-primary: var(--green);
+  --button-primary-text: var(--white);
+  --button-primary-shadow: #4f5437;
+  --button-secondary: var(--gold);
+  --button-secondary-text: var(--green);
+  --button-secondary-shadow: #bd7910;
+  --button-tertiary: var(--sky-dark);
+  --button-tertiary-text: var(--white);
+  --button-tertiary-shadow: #1d5273;
 
   --container: 1180px;
   --radius: 30px;
@@ -97,6 +108,8 @@ p {
   color: var(--muted);
   line-height: 1.75;
   font-size: 1rem;
+  font-family: "Quicksand", Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 600;
 }
 
 main {
@@ -364,7 +377,7 @@ main {
   width: 20px;
   height: 2px;
   border-radius: 2px;
-  background: var(--black);
+  background: var(--green);
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
@@ -412,9 +425,10 @@ h2,
 h3 {
   margin: 0;
   color: var(--text);
-  font-family: "Josefin Sans", Georgia, serif;
+  font-family: "Poppins", "Josefin Sans", sans-serif;
+  font-weight: 900;
   line-height: 1;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.03em;
 }
 
 h1 {
@@ -433,8 +447,8 @@ h1 span,
 h2 span,
 h3 span {
   color: var(--sky-dark);
-  font-style: italic;
-  font-weight: 500;
+  font-style: normal;
+  font-weight: 900;
 }
 
 .hero-text {
@@ -548,13 +562,41 @@ h3 span {
 
 .btn-outline-dark {
   background: transparent;
-  color: var(--black);
-  border-color: var(--black);
+  color: var(--green);
+  border-color: var(--green);
 }
 
 .btn-outline-dark:hover {
-  background: var(--black);
+  background: var(--green);
   color: var(--white);
+}
+
+.btn-precall {
+  color: var(--white);
+  border-color: var(--green);
+  background: var(--green);
+  box-shadow: 0 7px 0 #4f5437;
+}
+
+.btn-precall:hover {
+  color: var(--green);
+  border-color: var(--gold);
+  background: var(--gold);
+  box-shadow: 0 4px 0 #bd7910;
+}
+
+.btn-metabolic {
+  color: var(--green);
+  border-color: var(--gold);
+  background: var(--gold);
+  box-shadow: 0 7px 0 #bd7910;
+}
+
+.btn-metabolic:hover {
+  color: var(--white);
+  border-color: var(--green);
+  background: var(--green);
+  box-shadow: 0 4px 0 #4f5437;
 }
 
 /* =========================
@@ -753,6 +795,19 @@ h3 span {
   text-align: center;
 }
 
+.two-avenues-heading span {
+  display: block;
+  color: inherit;
+  font-style: normal;
+  font-weight: inherit;
+  white-space: nowrap;
+}
+
+.two-avenues-heading {
+  font-size: clamp(1.65rem, 7vw, 5rem);
+  line-height: 1.04;
+}
+
 .choice-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -840,16 +895,18 @@ h3 span {
 }
 
 .choice-logo-box {
-  min-height: 105px;
+  min-height: 190px;
+  padding: 18px 0;
   display: flex;
+  flex: 1;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
 
 .choice-logo-box img {
-  width: min(100%, 260px);
-  max-height: 110px;
+  width: min(100%, 340px);
+  max-height: 180px;
   object-fit: contain;
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -859,9 +916,9 @@ h3 span {
 }
 
 .choice-logo-box.wide img {
-  width: min(100%, 430px);
-  max-width: 430px;
-  max-height: 120px;
+  width: min(100%, 520px);
+  max-width: 520px;
+  max-height: 180px;
 }
 
 .card-label {
@@ -873,7 +930,7 @@ h3 span {
 }
 
 .choice-card .card-label {
-  margin: 0 0 10px;
+  margin: 0;
 }
 
 .choice-link {
@@ -979,6 +1036,26 @@ h3 span {
     var(--cream);
 }
 
+.health-hero-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.health-hero-logo {
+  width: min(100%, 500px);
+}
+
+.health-hero-actions .hero-text {
+  margin: 22px auto 0;
+}
+
+.health-hero-actions .button-row {
+  justify-content: center;
+}
+
 .books-hero {
   background:
     radial-gradient(circle at 8% 18%, var(--sage-soft), transparent 28%),
@@ -1046,10 +1123,10 @@ h3 span {
 
 .editorial-title h2 {
   text-transform: uppercase;
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", "Josefin Sans", sans-serif;
   letter-spacing: -0.05em;
   line-height: 1.05;
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .editorial-title,
@@ -1183,7 +1260,8 @@ h3 span {
 
 .book-cover-panel img {
   width: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   border-radius: calc(var(--radius) - 12px);
 }
 
@@ -1208,7 +1286,8 @@ h3 span {
 .character-grid img {
   width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   background: var(--white);
   border: 1px solid var(--border);
   box-shadow: 0 18px 40px rgba(36, 48, 47, 0.08);
@@ -1380,22 +1459,24 @@ h3 span {
 }
 
 .about-path-logo {
-  min-height: 130px;
+  min-height: 190px;
+  padding: 18px 0;
   display: flex;
+  flex: 1;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
 
 .about-path-logo img {
-  max-width: 310px;
-  max-height: 130px;
+  max-width: 460px;
+  max-height: 180px;
   object-fit: contain;
 }
 
 .about-path-logo-small img {
-  max-width: 170px;
-  max-height: 130px;
+  max-width: 320px;
+  max-height: 180px;
 }
 
 .about-path-card h3 {
@@ -1445,6 +1526,20 @@ h3 span {
 
 .contact-card h2 {
   font-size: clamp(2.6rem, 5vw, 4.7rem);
+}
+
+.contact-card-logo {
+  min-height: 190px;
+  margin: 18px auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card-logo img {
+  width: min(100%, 290px);
+  max-height: 190px;
+  object-fit: contain;
 }
 
 .contact-card .button-column {
@@ -1695,17 +1790,18 @@ h3 span {
   }
 
   .choice-logo-box {
-    min-height: 95px;
+    min-height: 150px;
+    padding: 14px 0;
   }
 
   .choice-logo-box img {
-    width: min(100%, 220px);
-    max-height: 100px;
+    width: min(100%, 280px);
+    max-height: 140px;
   }
 
   .choice-logo-box.wide img {
-    width: min(100%, 330px);
-    max-height: 110px;
+    width: min(100%, 360px);
+    max-height: 150px;
   }
 
   h1 {
@@ -1797,11 +1893,11 @@ h3 span {
   }
 
   .about-path-logo img {
-    max-width: 260px;
+    max-width: 300px;
   }
 
   .about-path-logo-small img {
-    max-width: 150px;
+    max-width: 240px;
   }
 }
 
@@ -1992,7 +2088,7 @@ h3 span {
   color: var(--white);
   border-color: var(--coral);
   background: var(--coral);
-  box-shadow: 0 7px 0 #4930a8;
+  box-shadow: 0 7px 0 #4f5437;
 }
 
 .header-cta:hover {
@@ -2079,7 +2175,7 @@ h3 span {
 .btn-dark {
   background: var(--coral);
   border-color: var(--coral);
-  box-shadow: 0 7px 0 #4930a8;
+  box-shadow: 0 7px 0 #4f5437;
 }
 
 .btn-dark:hover {
@@ -2763,7 +2859,7 @@ h2 {
 }
 
 .palette-overcomers-red .preview-real-header {
-  --header-accent: #cf2300; --header-accent-dark: #9f1b00; --header-secondary: #ffd20a; --header-bg: #fffaf1;
+  --header-accent: #6a704a; --header-accent-dark: #4f5437; --header-secondary: #ffd20a; --header-bg: #fffaf1;
 }
 
 .palette-overcomers-blue .preview-real-header {
@@ -2971,7 +3067,7 @@ h2 {
 }
 
 .mission-logo-red {
-  --mission-script-color: #cf2300;
+  --mission-script-color: #6a704a;
   --mission-script-shadow: #ffd20a;
   --mission-script-outline: 0.037em;
 }
@@ -3024,12 +3120,12 @@ h2 {
 }
 
 .palette-overcomers-red .concept-home-hero {
-  --preview-accent: #cf2300;
-  --preview-accent-dark: #9f1b00;
+  --preview-accent: #6a704a;
+  --preview-accent-dark: #4f5437;
   --preview-secondary: #ffd20a;
   --preview-soft: #fffaf1;
   --preview-panel: #fff4de;
-  --preview-shadow: rgba(207, 35, 0, 0.15);
+  --preview-shadow: rgba(106, 112, 74, 0.15);
 }
 
 .palette-overcomers-blue .concept-home-hero {
@@ -3284,7 +3380,7 @@ h2 {
 }
 
 .hero-live-lockup .hero-live-script {
-  color: #082557;
+  color: var(--green);
   font-family: "Coldia", "Alex Brush", cursive;
   font-size: clamp(5.4rem, 12vw, 9.5rem);
   font-style: normal;
@@ -3296,7 +3392,7 @@ h2 {
 
 .hero-live-lockup .hero-live-mission {
   margin-top: 0.25em;
-  color: #346326;
+  color: var(--green);
   font-family: "Josefin Sans", sans-serif;
   font-size: clamp(2.5rem, 6.2vw, 5.15rem);
   font-style: normal;
@@ -3313,7 +3409,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 14px;
-  color: #f05266;
+  color: var(--green);
   font-size: 1.5rem;
 }
 
@@ -3348,7 +3444,7 @@ h2 {
 }
 
 .hero-service-card + .hero-service-card {
-  border-left: 2px solid #082557;
+  border-left: 2px solid var(--green);
 }
 
 .hero-service-card:hover {
@@ -3368,7 +3464,7 @@ h2 {
 }
 
 .hero-service-card strong {
-  color: #082557;
+  color: var(--green);
   font-family: "Josefin Sans", sans-serif;
   font-size: clamp(0.86rem, 1.55vw, 1.2rem);
   font-weight: 700;
@@ -3380,7 +3476,7 @@ h2 {
 
 .hero-service-card em {
   margin-top: 5px;
-  color: #346326;
+  color: var(--green);
   font-family: "Coldia", "Alex Brush", cursive;
   font-size: clamp(1.35rem, 2.3vw, 2rem);
   font-style: normal;
@@ -3402,7 +3498,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #082557;
+  color: var(--green);
   font-family: "Josefin Sans", sans-serif;
   font-size: clamp(0.76rem, 1.4vw, 1rem);
   font-weight: 700;
@@ -3411,7 +3507,7 @@ h2 {
 }
 
 .hero-value-icon {
-  color: #082557;
+  color: var(--green);
   font-size: 1.65rem;
   line-height: 1;
 }
@@ -3421,14 +3517,14 @@ h2 {
 }
 
 .hero-value-growth {
-  color: #f05266;
+  color: var(--green);
 }
 
 .hero-value-adventure {
   width: 1.55rem;
   height: 1.55rem;
   position: relative;
-  border: 2px solid #082557;
+  border: 2px solid var(--green);
   border-radius: 50%;
   overflow: hidden;
 }
@@ -3441,15 +3537,15 @@ h2 {
 
 .hero-value-adventure::before {
   inset: 0 5px;
-  border-right: 1.5px solid #082557;
-  border-left: 1.5px solid #082557;
+  border-right: 1.5px solid var(--green);
+  border-left: 1.5px solid var(--green);
   border-radius: 50%;
 }
 
 .hero-value-adventure::after {
   height: 2px;
   inset: 50% 1px auto;
-  background: #082557;
+  background: var(--green);
   transform: translateY(-1px);
 }
 
@@ -3459,8 +3555,8 @@ h2 {
   top: 5px;
   right: -1px;
   left: -1px;
-  border-top: 1.5px solid #082557;
-  border-bottom: 1.5px solid #082557;
+  border-top: 1.5px solid var(--green);
+  border-bottom: 1.5px solid var(--green);
   border-radius: 50%;
 }
 
@@ -3474,7 +3570,7 @@ h2 {
 
 .hero-impact {
   margin: 0;
-  color: #082557;
+  color: var(--green);
   font-family: "Coldia", "Alex Brush", cursive;
   font-size: clamp(2rem, 4.4vw, 3.7rem);
   font-weight: 700;
@@ -3546,11 +3642,11 @@ h2 {
   content: "";
   height: 2px;
   flex: 1;
-  background: linear-gradient(90deg, transparent, #346326);
+  background: linear-gradient(90deg, transparent, var(--green));
 }
 
 .hero-leaf-rule::after {
-  background: linear-gradient(90deg, #346326, transparent);
+  background: linear-gradient(90deg, var(--green), transparent);
 }
 
 .hero-leaf-sprig {
@@ -3566,7 +3662,7 @@ h2 {
   position: absolute;
   top: 10px;
   left: 4px;
-  background: #346326;
+  background: var(--green);
   border-radius: 99px;
   transform: rotate(8deg);
 }
@@ -3577,7 +3673,7 @@ h2 {
   top: 7px;
   left: 1px;
   border-top: 4px solid transparent;
-  border-right: 8px solid #346326;
+  border-right: 8px solid var(--green);
   border-bottom: 4px solid transparent;
   transform: rotate(8deg);
 }
@@ -3588,7 +3684,7 @@ h2 {
   position: absolute;
   top: 2px;
   left: 22px;
-  background: #346326;
+  background: var(--green);
   border-radius: 100% 0 100% 0;
   transform: rotate(20deg);
 }
@@ -3909,7 +4005,11 @@ body {
 }
 
 .brand-text strong {
-  color: var(--black);
+  color: var(--green);
+}
+
+.nav a {
+  color: var(--green);
 }
 
 .brand-text small {
@@ -3930,7 +4030,7 @@ body {
   color: var(--white);
   border-color: var(--coral);
   background: var(--coral);
-  box-shadow: 0 7px 0 #a72539;
+  box-shadow: 0 7px 0 #4f5437;
 }
 
 .header-cta:hover,
@@ -3943,7 +4043,7 @@ body {
 }
 
 .btn-outline-pink {
-  color: var(--black);
+  color: var(--green);
   border-color: var(--sky-dark);
   background: var(--white);
   box-shadow: 0 7px 0 rgba(43, 111, 153, 0.2);
@@ -4283,7 +4383,7 @@ body {
   left: 51.8%;
   z-index: 24;
   border-radius: 2px;
-  background: #082557;
+  background: var(--green);
 }
 
 .mission-logo-dot {
@@ -4622,5 +4722,970 @@ body {
 
   .about-story-card p:first-child {
     padding: 0 0 24px 18px;
+  }
+}
+
+/* Fuller brand-page heroes */
+.health-hero,
+.books-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.health-hero {
+  background:
+    radial-gradient(circle at 7% 78%, transparent 0 35px, rgba(239, 168, 35, 0.16) 36px 39px, transparent 40px),
+    radial-gradient(circle at 86% 72%, transparent 0 82px, rgba(106, 112, 74, 0.1) 83px 87px, transparent 88px),
+    radial-gradient(circle at 97% 22%, transparent 0 66px, rgba(43, 111, 153, 0.1) 67px 70px, transparent 71px),
+    radial-gradient(circle at 29% 30%, transparent 0 25px, rgba(184, 217, 237, 0.18) 26px 29px, transparent 30px),
+    radial-gradient(circle at 18% 57%, rgba(239, 168, 35, 0.1) 0 13px, transparent 14px),
+    radial-gradient(circle at 12% 12%, rgba(239, 168, 35, 0.2), transparent 30%),
+    radial-gradient(circle at 92% 10%, var(--sage-soft), transparent 26%),
+    var(--cream);
+}
+
+.books-hero {
+  background:
+    radial-gradient(circle at 5% 70%, transparent 0 74px, rgba(43, 111, 153, 0.1) 75px 79px, transparent 80px),
+    radial-gradient(circle at 91% 76%, transparent 0 42px, rgba(239, 168, 35, 0.16) 43px 46px, transparent 47px),
+    radial-gradient(circle at 96% 19%, transparent 0 72px, rgba(106, 112, 74, 0.1) 73px 77px, transparent 78px),
+    radial-gradient(circle at 38% 18%, transparent 0 26px, rgba(184, 217, 237, 0.2) 27px 30px, transparent 31px),
+    radial-gradient(circle at 74% 48%, rgba(239, 168, 35, 0.08) 0 15px, transparent 16px),
+    radial-gradient(circle at 8% 18%, var(--sky-soft), transparent 30%),
+    radial-gradient(circle at 92% 10%, var(--coral-soft), transparent 26%),
+    var(--white);
+}
+
+.health-hero::before,
+.books-hero::before,
+.health-hero::after,
+.books-hero::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.health-hero::before,
+.books-hero::before {
+  width: 112px;
+  aspect-ratio: 1;
+  top: 16%;
+  left: 4%;
+  border: 2px solid rgba(43, 111, 153, 0.1);
+  box-shadow:
+    31vw 35vh 0 -34px rgba(239, 168, 35, 0.14),
+    67vw -5vh 0 20px rgba(106, 112, 74, 0.07);
+  animation: brand-bubble-drift 12s ease-in-out infinite alternate;
+}
+
+.health-hero::after,
+.books-hero::after {
+  width: 42px;
+  aspect-ratio: 1;
+  right: 13%;
+  bottom: 12%;
+  background: rgba(239, 168, 35, 0.09);
+  box-shadow:
+    -34vw -42vh 0 10px rgba(184, 217, 237, 0.11),
+    9vw -22vh 0 -7px rgba(106, 112, 74, 0.12);
+  animation: brand-bubble-drift 10s ease-in-out -4s infinite alternate-reverse;
+}
+
+.health-hero > .container,
+.books-hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.health-hero-logo {
+  width: min(100%, 680px);
+}
+
+.health-hero-logo.alife-logo-feature img {
+  width: min(100%, 620px) !important;
+}
+
+.books-hero .sub-hero-grid {
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(42px, 5vw, 70px);
+}
+
+.books-hero .overcomers-logo-feature img {
+  width: min(100%, 700px) !important;
+}
+
+@keyframes brand-bubble-drift {
+  to {
+    transform: translate3d(18px, -20px, 0) scale(1.06);
+  }
+}
+
+@media (max-width: 1050px) {
+  .books-hero .sub-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .books-hero .overcomers-logo-feature img {
+    width: min(100%, 560px) !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .health-hero-logo {
+    width: 100%;
+  }
+
+  .health-hero-logo.alife-logo-feature img {
+    width: min(100%, 470px) !important;
+  }
+
+  .books-hero .overcomers-logo-feature img {
+    width: min(100%, 420px) !important;
+  }
+
+  .health-hero::before,
+  .books-hero::before {
+    left: -38px;
+  }
+
+  .health-hero::after,
+  .books-hero::after {
+    right: 4%;
+  }
+}
+
+/* Color-matched metabolic steps */
+.steps-grid article:nth-child(1) {
+  --step-color: #6a5136;
+  --step-soft: #fbf3e8;
+  --step-shadow: rgba(106, 81, 54, 0.18);
+}
+
+.steps-grid article:nth-child(2) {
+  --step-color: #c98200;
+  --step-soft: #fff6cf;
+  --step-shadow: rgba(239, 168, 35, 0.22);
+}
+
+.steps-grid article:nth-child(3) {
+  --step-color: #6a704a;
+  --step-soft: #f0f4e6;
+  --step-shadow: rgba(106, 112, 74, 0.2);
+}
+
+.steps-grid article:nth-child(1),
+.steps-grid article:nth-child(2),
+.steps-grid article:nth-child(3) {
+  border: 3px solid var(--step-color);
+  background: linear-gradient(145deg, #fffdf8, var(--step-soft));
+  box-shadow: 9px 10px 0 var(--step-shadow);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.steps-grid article:nth-child(1):hover,
+.steps-grid article:nth-child(2):hover,
+.steps-grid article:nth-child(3):hover {
+  border-color: var(--step-color);
+  box-shadow: 12px 14px 0 var(--step-shadow);
+}
+
+.steps-grid article span,
+.steps-grid article h3,
+.steps-grid article p {
+  color: var(--step-color);
+  text-wrap: balance;
+}
+
+.steps-grid article p {
+  max-width: 31ch;
+  margin-right: auto;
+  margin-left: auto;
+  text-wrap: pretty;
+}
+
+.steps-grid article span {
+  font-family: "Josefin Sans", Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Softer brand-green footer */
+.footer {
+  background:
+    radial-gradient(circle at 92% 8%, rgba(255, 250, 240, 0.16), transparent 30%),
+    linear-gradient(135deg, #78805a, #687149);
+}
+
+.footer::before {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+/* Centered Overcomers hero */
+.books-hero .overcomers-hero-layout {
+  max-width: 920px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(24px, 4vw, 42px);
+  text-align: center;
+}
+
+.books-hero .overcomers-logo-feature {
+  order: -1;
+  width: min(100%, 760px);
+  margin: 0 auto;
+}
+
+.books-hero .overcomers-logo-feature img {
+  width: min(100%, 720px) !important;
+}
+
+.overcomers-hero-copy .hero-text {
+  max-width: 760px;
+  margin: 0 auto;
+  text-wrap: pretty;
+}
+
+/* Replace the remaining navy feature panels with brand green */
+.home-hero-panel,
+.book-intro-card,
+.black-panel {
+  color: var(--white);
+  border-color: #858d63;
+  background:
+    radial-gradient(circle at top right, rgba(255, 250, 240, 0.18), transparent 38%),
+    linear-gradient(145deg, #78805a, #626c44);
+  box-shadow: 12px 12px 0 rgba(106, 112, 74, 0.2);
+}
+
+.home-hero-panel p,
+.book-intro-card p,
+.black-panel p {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+/* Two-line book title and matching stacked actions */
+.book-title {
+  font-size: clamp(2.35rem, 4vw, 4.25rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.book-title span {
+  display: block;
+  color: inherit;
+  font-style: normal;
+  font-weight: inherit;
+  white-space: nowrap;
+}
+
+.book-content .button-row {
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book-content .button-row .btn {
+  width: min(100%, 340px);
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+/* Two-line character section heading */
+.character-title {
+  width: 100%;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.character-title span {
+  display: block;
+  color: inherit;
+  font-style: normal;
+  font-weight: inherit;
+  white-space: nowrap;
+}
+
+.character-title span:first-child {
+  font-size: clamp(2.25rem, 5vw, 4.8rem);
+}
+
+.character-title span:last-child {
+  margin-top: 0.16em;
+  font-size: clamp(0.82rem, 3.65vw, 3.3rem);
+  letter-spacing: -0.035em;
+}
+
+/* About story highlight */
+.about-story-heading h2,
+.about-story-heading h2 span {
+  color: var(--gold);
+}
+
+.about-paths-title {
+  font-size: clamp(1.85rem, 5.2vw, 5rem);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.about-paths-title span {
+  display: block;
+  color: inherit;
+  white-space: nowrap;
+}
+
+@media (max-width: 650px) {
+  .about-paths-title {
+    font-size: clamp(1.55rem, 8vw, 2.5rem);
+  }
+}
+
+/* =========================
+   UNIFIED BUTTON SYSTEM
+========================= */
+
+.btn,
+.header-cta {
+  --btn-bg: var(--button-primary);
+  --btn-color: var(--button-primary-text);
+  --btn-border: var(--button-primary);
+  --btn-shadow: var(--button-primary-shadow);
+  --btn-hover-bg: var(--button-secondary);
+  --btn-hover-color: var(--button-secondary-text);
+  --btn-hover-border: var(--button-secondary);
+  --btn-hover-shadow: var(--button-secondary-shadow);
+
+  min-height: 56px;
+  padding: 0 26px;
+  border: 2px solid var(--btn-border);
+  border-radius: 999px;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--btn-color);
+  background: var(--btn-bg);
+  box-shadow:
+    0 7px 0 var(--btn-shadow),
+    0 12px 24px rgba(8, 37, 87, 0.1);
+  font-family: "Poppins", "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: 0.035em;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    transform 0.22s ease,
+    color 0.22s ease,
+    background 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.btn-metabolic,
+.btn-outline-pink {
+  --btn-bg: var(--button-secondary);
+  --btn-color: var(--button-secondary-text);
+  --btn-border: var(--button-secondary);
+  --btn-shadow: var(--button-secondary-shadow);
+  --btn-hover-bg: var(--button-primary);
+  --btn-hover-color: var(--button-primary-text);
+  --btn-hover-border: var(--button-primary);
+  --btn-hover-shadow: var(--button-primary-shadow);
+}
+
+.btn-dark,
+.btn-pink,
+.btn-precall,
+.btn-outline-dark {
+  --btn-bg: var(--button-primary);
+  --btn-color: var(--button-primary-text);
+  --btn-border: var(--button-primary);
+  --btn-shadow: var(--button-primary-shadow);
+  --btn-hover-bg: var(--button-secondary);
+  --btn-hover-color: var(--button-secondary-text);
+  --btn-hover-border: var(--button-secondary);
+  --btn-hover-shadow: var(--button-secondary-shadow);
+}
+
+.btn-tertiary {
+  --btn-bg: var(--button-tertiary);
+  --btn-color: var(--button-tertiary-text);
+  --btn-border: var(--button-tertiary);
+  --btn-shadow: var(--button-tertiary-shadow);
+  --btn-hover-bg: var(--button-primary);
+  --btn-hover-color: var(--button-primary-text);
+  --btn-hover-border: var(--button-primary);
+  --btn-hover-shadow: var(--button-primary-shadow);
+}
+
+.btn::before,
+.header-cta::before {
+  content: "";
+  width: 45%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -80%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.44), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.55s ease;
+  pointer-events: none;
+}
+
+.btn:hover,
+.header-cta:hover {
+  color: var(--btn-hover-color);
+  background: var(--btn-hover-bg);
+  border-color: var(--btn-hover-border);
+  box-shadow:
+    0 4px 0 var(--btn-hover-shadow),
+    0 9px 18px rgba(8, 37, 87, 0.12);
+  transform: translateY(-3px);
+}
+
+.btn:hover::before,
+.header-cta:hover::before {
+  left: 135%;
+}
+
+.btn:active,
+.header-cta:active {
+  box-shadow: 0 2px 0 var(--btn-hover-shadow);
+  transform: translateY(2px);
+}
+
+@media (max-width: 650px) {
+  .header .header-cta {
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-width: 0;
+    box-shadow: none;
+  }
+
+  .header .nav.nav-open + .header-cta {
+    min-height: 56px;
+    padding: 0 26px;
+    border-width: 2px;
+    box-shadow:
+      0 7px 0 var(--btn-shadow),
+      0 12px 24px rgba(8, 37, 87, 0.1);
+  }
+}
+
+/* Compact Contact layout aligned with the Home CTAs */
+.contact-title {
+  font-size: clamp(3rem, 6.2vw, 6.4rem);
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+}
+
+.contact-title span {
+  display: block;
+  color: inherit;
+  white-space: nowrap;
+}
+
+.contact-card-logo-books img {
+  width: min(100%, 380px);
+}
+
+.contact-card .button-column {
+  align-items: center;
+}
+
+.contact-card .btn {
+  width: min(100%, 300px);
+}
+
+.contact-card--health {
+  border-color: var(--sky-dark);
+  background:
+    radial-gradient(circle at 12% 10%, rgba(184, 217, 237, 0.48), transparent 34%),
+    linear-gradient(145deg, #ffffff, #eef7fc);
+  box-shadow: 10px 12px 0 rgba(43, 111, 153, 0.16);
+}
+
+.contact-card--books {
+  border-color: var(--sage-dark);
+  background:
+    radial-gradient(circle at 88% 10%, rgba(239, 168, 35, 0.22), transparent 34%),
+    linear-gradient(145deg, #fffdf8, #f0f4e6);
+  box-shadow: 10px 12px 0 rgba(106, 112, 74, 0.18);
+}
+
+.contact-card--health:hover {
+  border-color: var(--sky-dark);
+  box-shadow: 13px 15px 0 rgba(43, 111, 153, 0.2);
+}
+
+.contact-card--books:hover {
+  border-color: var(--sage-dark);
+  box-shadow: 13px 15px 0 rgba(106, 112, 74, 0.22);
+}
+
+.contact-options .contact-grid {
+  width: min(1380px, calc(100% - 40px));
+  grid-template-columns: minmax(320px, 1fr) minmax(310px, 0.88fr) minmax(320px, 1fr);
+  align-items: stretch;
+  gap: 28px;
+}
+
+.contact-options .contact-card {
+  min-width: 0;
+  padding: clamp(30px, 3vw, 44px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-connect-card {
+  min-width: 0;
+  padding: clamp(28px, 3vw, 42px);
+  position: relative;
+  overflow: hidden;
+  border: 3px solid var(--gold);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 90% 8%, rgba(184, 217, 237, 0.52), transparent 32%),
+    radial-gradient(circle at 8% 92%, rgba(239, 168, 35, 0.2), transparent 34%),
+    linear-gradient(145deg, #fffaf0, #ffffff);
+  box-shadow: 10px 12px 0 rgba(239, 168, 35, 0.2);
+  text-align: center;
+}
+
+.contact-connect-card::before {
+  content: "✦";
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  color: var(--sky-dark);
+  font-size: 1.5rem;
+  opacity: 0.72;
+}
+
+.contact-connect-card h2 {
+  margin-top: 16px;
+  color: var(--green);
+  font-size: clamp(2rem, 2.8vw, 3.15rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.contact-connect-copy {
+  max-width: 31ch;
+  margin: 18px auto 24px;
+  color: #40586d;
+  font-size: 1rem;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.contact-form {
+  display: grid;
+  gap: 15px;
+  text-align: left;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 7px;
+  color: var(--green);
+  font-family: "Quicksand", Avenir, Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  border: 2px solid rgba(43, 111, 153, 0.24);
+  border-radius: 15px;
+  color: var(--black);
+  background: rgba(255, 255, 255, 0.88);
+  font: 600 1rem/1.35 "Quicksand", Avenir, Helvetica, Arial, sans-serif;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.contact-form input,
+.contact-form select {
+  min-height: 50px;
+  padding: 0 15px;
+}
+
+.contact-form textarea {
+  min-height: 116px;
+  padding: 13px 15px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--sky-dark);
+  background: var(--white);
+  box-shadow: 0 0 0 4px rgba(184, 217, 237, 0.38);
+}
+
+.contact-submit {
+  width: min(100%, 260px);
+  margin: 8px auto 0;
+}
+
+@media (max-width: 1100px) {
+  .contact-options .contact-grid {
+    width: min(760px, calc(100% - 40px));
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card--health {
+    order: 1;
+  }
+
+  .contact-connect-card {
+    order: 2;
+  }
+
+  .contact-card--books {
+    order: 3;
+  }
+}
+
+@media (max-width: 650px) {
+  .contact-title {
+    font-size: clamp(1.55rem, 8vw, 3rem);
+    letter-spacing: -0.045em;
+  }
+
+  .contact-card-logo-books img {
+    width: min(100%, 320px);
+  }
+}
+
+/* Balanced headings and a higher-contrast commitment panel */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.black-panel {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  border-color: #8d9870;
+  background:
+    radial-gradient(circle at top right, rgba(255, 250, 240, 0.16), transparent 38%),
+    linear-gradient(145deg, #737d52, #535d38);
+  box-shadow: 12px 12px 0 rgba(83, 93, 56, 0.24);
+}
+
+.black-panel h2 {
+  font-size: clamp(2.4rem, 4.2vw, 4.65rem);
+  line-height: 1.13;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.black-panel p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.black-panel .btn {
+  --btn-bg: #8f9d66;
+  --btn-color: var(--white);
+  --btn-border: #fffaf0;
+  --btn-shadow: #46502f;
+  --btn-hover-bg: var(--button-secondary);
+  --btn-hover-color: var(--button-secondary-text);
+  --btn-hover-border: var(--button-secondary);
+  --btn-hover-shadow: var(--button-secondary-shadow);
+}
+
+@media (max-width: 1050px) {
+  .black-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Larger primary navigation labels */
+.nav a {
+  font-size: 1.16rem;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 650px) {
+  .nav a {
+    font-size: 1.06rem;
+  }
+}
+
+/* Real One Big Mission brand lockup in the header */
+.brand-logo {
+  width: clamp(128px, 11vw, 168px);
+  height: 64px;
+  object-fit: contain;
+  object-position: center;
+  mix-blend-mode: normal;
+  filter: none;
+  opacity: 1;
+  transition: none;
+}
+
+.brand:hover,
+.brand:hover .brand-logo {
+  filter: none;
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 650px) {
+  .brand-logo {
+    width: 122px;
+    height: 56px;
+  }
+}
+
+/* Mobile header, footer finish, and faster route presentation */
+html {
+  min-height: 100%;
+  background: #687149;
+  overscroll-behavior-y: none;
+}
+
+body,
+#root {
+  min-height: 100%;
+  background-color: #687149;
+}
+
+body {
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+}
+
+#root,
+.site {
+  min-height: 100svh;
+}
+
+.site {
+  display: flex;
+  flex-direction: column;
+  background: var(--cream);
+  overflow-x: clip;
+}
+
+.site > main {
+  flex: 1 0 auto;
+}
+
+.site > .footer {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.footer-credit {
+  margin-top: 44px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.footer-credit a {
+  color: var(--white);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+
+.footer-credit a:hover {
+  color: var(--gold);
+}
+
+.black-panel {
+  gap: clamp(30px, 4vw, 52px);
+}
+
+@media (max-width: 1050px) {
+  .header {
+    justify-content: flex-start;
+  }
+
+  .header .brand {
+    min-width: 0;
+    flex: 0 1 auto;
+  }
+
+  .header .menu-toggle {
+    margin-right: 0;
+    margin-left: auto;
+    flex: 0 0 48px;
+  }
+
+  .black-panel {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    width: 100%;
+  }
+
+  .nav.nav-open {
+    padding-bottom: 10px;
+  }
+
+  .page-shell {
+    animation: none;
+  }
+
+  .reveal {
+    transform: translateY(18px);
+    transition-duration: 0.45s;
+  }
+
+  .black-panel {
+    gap: 22px;
+  }
+
+  .black-panel h2,
+  .black-panel p {
+    margin: 0;
+  }
+
+  .footer {
+    padding-bottom: 34px;
+  }
+
+  .footer-credit {
+    margin-top: 32px;
+    padding-top: 18px;
+    font-size: 0.84rem;
+  }
+
+  /* Compact brand-page introductions */
+  .sub-hero.health-hero,
+  .sub-hero.books-hero {
+    display: block;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 24px 0 36px !important;
+  }
+
+  .health-hero > .health-hero-content,
+  .books-hero > .overcomers-hero-layout {
+    height: auto !important;
+    min-height: 0 !important;
+    justify-content: flex-start;
+  }
+
+  .health-hero > .health-hero-content {
+    gap: 10px;
+  }
+
+  .health-hero .logo-feature,
+  .books-hero .logo-feature {
+    flex: 0 0 auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  .health-hero-logo.alife-logo-feature img {
+    width: min(64vw, 240px) !important;
+    height: auto !important;
+  }
+
+  .health-hero-actions {
+    width: 100%;
+  }
+
+  .health-hero-actions .hero-text {
+    margin-top: 10px;
+    line-height: 1.55;
+  }
+
+  .health-hero-actions .button-row {
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .books-hero .overcomers-hero-layout {
+    gap: 14px;
+  }
+
+  .books-hero .overcomers-logo-feature {
+    width: min(100%, 330px);
+  }
+
+  .books-hero .overcomers-logo-feature img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .overcomers-hero-copy .hero-text {
+    margin: 0 auto;
+    font-size: 1.04rem;
+    line-height: 1.58;
+  }
+
+  /* Preserve the complete Overcomers artwork on narrow screens. */
+  .featured-book-section .book-cover-panel {
+    width: 100%;
+    height: auto !important;
+    padding: 10px;
+    align-self: start;
+    transform: none !important;
+  }
+
+  .featured-book-section .book-cover-panel img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  .characters-section .character-grid img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
   }
 }

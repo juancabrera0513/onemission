@@ -4,14 +4,22 @@ import { NavLink, Link } from "react-router-dom";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleHomeClick = () => {
+    setMenuOpen(false);
+
+    if (window.location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="header">
-      <Link to="/" className="brand">
-        <span className="brand-icon">S</span>
-        <span className="brand-text">
-          <strong>Stacey</strong>
-          <small>One Big Mission</small>
-        </span>
+      <Link to="/" className="brand" onClick={handleHomeClick}>
+        <img
+          className="brand-logo"
+          src="/assets/one-big-mission/one-big-mission-header-transparent.png"
+          alt="One Big Mission"
+        />
       </Link>
 
       <button
@@ -32,16 +40,13 @@ export default function Header() {
         className={`nav${menuOpen ? " nav-open" : ""}`}
         onClick={() => setMenuOpen(false)}
       >
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/" onClick={handleHomeClick}>Home</NavLink>
         <NavLink to="/metabolic-reset">A Life of Style</NavLink>
         <NavLink to="/the-overcomers">The Overcomers</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact">Contact</NavLink>
       </nav>
 
-      <Link to="/contact" className="header-cta">
-        Start Here
-      </Link>
     </header>
   );
 }

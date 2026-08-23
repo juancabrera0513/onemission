@@ -15,28 +15,25 @@ export default function Home() {
       <section className="choice-section">
         <div className="container">
           <div className="section-heading center">
-            <h2>Two areas. One heart-led mission.</h2>
+            <h2 className="two-avenues-heading">
+              <span>Two avenues.</span>
+              <span>One heart-led mission.</span>
+            </h2>
           </div>
 
           <div className="choice-grid">
             <Link to="/metabolic-reset" className="choice-card choice-health">
+              <p className="card-label">Metabolic Health Coaching</p>
               <div className="choice-logo-box">
                 <img src={assets.alifeLogo} alt="A Life of Style logo" />
-              </div>
-              <div>
-                <p className="card-label">Metabolic Reset Coach</p>
-                <h3>A Life of Style</h3>
               </div>
               <span className="choice-link">Explore Metabolic Coaching</span>
             </Link>
 
             <Link to="/the-overcomers" className="choice-card choice-books">
+              <p className="card-label">Children’s Books</p>
               <div className="choice-logo-box wide">
                 <img src={assets.overcomersLogo} alt="The Overcomers logo" />
-              </div>
-              <div>
-                <p className="card-label">Children’s Books</p>
-                <h3>The Overcomers</h3>
               </div>
               <span className="choice-link">Explore The Books</span>
             </Link>
@@ -53,7 +50,7 @@ export default function Home() {
           <div>
             <h2>Meet Stacey</h2>
             <p>
-              Stacey is a Metabolic Reset Coach, storyteller, and creative strategist
+              Stacey is a metabolic health coach, storyteller, and creative strategist
               who believes in the power of heart-led transformation. With a
               background in health and wellness, English Literature, and a gift for
               hearing the story under the surface, she brings a unique and effective

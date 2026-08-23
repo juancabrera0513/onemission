@@ -4,12 +4,8 @@ export default function Overcomers() {
   return (
     <>
       <section className="sub-hero books-hero">
-        <div className="container sub-hero-grid">
-          <div>
-            <h1>
-              The <span>Overcomers</span>
-            </h1>
-
+        <div className="container sub-hero-grid overcomers-hero-layout">
+          <div className="overcomers-hero-copy">
             <p className="hero-text">
               The Overcomers is a heartwarming series of beautifully told, rhyming
               stories that inspire readers of all ages to believe in themselves, 
@@ -20,7 +16,14 @@ export default function Overcomers() {
           </div>
 
           <div className="logo-feature logo-feature-clean overcomers-logo-feature">
-            <img src={assets.overcomersLogo} alt="The Overcomers logo" />
+            <img
+              src={assets.overcomersLogo}
+              alt="The Overcomers logo"
+              width="2045"
+              height="969"
+              decoding="async"
+              fetchPriority="high"
+            />
           </div>
         </div>
       </section>
@@ -42,11 +45,21 @@ export default function Overcomers() {
       <section className="featured-book-section">
         <div className="container featured-book-grid">
           <div className="book-cover-panel">
-            <img src={assets.flippyCover} alt="Flippy the Frog: More Like Me" />
+            <img
+              src={assets.flippyCover}
+              alt="Flippy the Frog: More Like Me"
+              width="969"
+              height="1000"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
 
           <div className="book-content">
-            <h2>Flippy the Frog: More Like Me</h2>
+            <h2 className="book-title">
+              <span>Flippy the Frog:</span>
+              <span>More Like Me</span>
+            </h2>
 
             <p>
               Flippy the frog is dearly loved by his family—a boy named Sam and a 
@@ -95,7 +108,7 @@ export default function Overcomers() {
               </a>
 
               <a
-                href={links.flippyAmazon}
+                href={links.flippyColoringBook}
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-outline-pink"
@@ -110,16 +123,19 @@ export default function Overcomers() {
       <section className="characters-section">
         <div className="container">
           <div className="section-heading center">
-            <h2>Lovable animal friends with gentle lessons.</h2>
+            <h2 className="character-title">
+              <span>Lovable Animal Friends</span>
+              <span>Discovering Courage, Kindness and Purpose</span>
+            </h2>
           </div>
 
           <div className="character-grid">
-            <img src={assets.flippyFrog} alt="Flippy the Frog illustration" />
-            <img src={assets.penguin} alt="Penguin illustration" />
-            <img src={assets.elephantSketch} alt="Elephant sketch" />
-            <img src={assets.dogSketch} alt="Dog sketch" />
-            <img src={assets.rhinoSketch} alt="Rhino sketch" />
-            <img src={assets.penguinScene} alt="Penguin scene" />
+            <img src={assets.flippyFrog} alt="Flippy the Frog illustration" width="735" height="750" loading="lazy" decoding="async" />
+            <img src={assets.penguin} alt="Penguin illustration" width="615" height="750" loading="lazy" decoding="async" />
+            <img src={assets.elephantSketch} alt="Elephant sketch" width="440" height="750" loading="lazy" decoding="async" />
+            <img src={assets.dogSketch} alt="Dog sketch" width="750" height="679" loading="lazy" decoding="async" />
+            <img src={assets.rhinoSketch} alt="Rhino sketch" width="689" height="700" loading="lazy" decoding="async" />
+            <img src={assets.penguinScene} alt="Penguin scene" width="750" height="479" loading="lazy" decoding="async" />
           </div>
         </div>
       </section>

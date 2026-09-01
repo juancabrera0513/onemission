@@ -19,13 +19,16 @@ export default function Header() {
           className="brand-logo"
           src="/assets/one-big-mission/one-big-mission-header-transparent.png"
           alt="One Big Mission"
+          width="1254"
+          height="930"
+          decoding="async"
         />
       </Link>
 
       <button
         className="menu-toggle"
         type="button"
-        aria-label="Toggle navigation"
+        aria-label={menuOpen ? "Close navigation" : "Open navigation"}
         aria-expanded={menuOpen}
         aria-controls="primary-navigation"
         onClick={() => setMenuOpen((open) => !open)}
@@ -37,6 +40,7 @@ export default function Header() {
 
       <nav
         id="primary-navigation"
+        aria-label="Primary navigation"
         className={`nav${menuOpen ? " nav-open" : ""}`}
         onClick={() => setMenuOpen(false)}
       >

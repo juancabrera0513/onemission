@@ -5,6 +5,7 @@ export default function Overcomers() {
     <>
       <section className="sub-hero books-hero">
         <div className="container sub-hero-grid overcomers-hero-layout">
+          <h1 className="visually-hidden">The Overcomers Children’s Book Series</h1>
           <div className="overcomers-hero-copy">
             <p className="hero-text">
               The Overcomers is a heartwarming series of beautifully told, rhyming

@@ -984,14 +984,14 @@ h3 span {
 
 .image-stack {
   position: relative;
-  min-height: 620px;
+  min-height: 460px;
 }
 
 .image-stack img {
   position: absolute;
-  width: 58%;
-  height: 470px;
-  object-fit: cover;
+  display: block;
+  height: auto;
+  object-fit: contain;
   box-shadow: var(--shadow);
   border-radius: var(--radius);
   transition:
@@ -999,24 +999,38 @@ h3 span {
     box-shadow 0.5s ease;
 }
 
-.image-stack:hover img:first-child {
-  transform: translate(-8px, 8px) rotate(-2deg);
-}
+@media (hover: hover) and (pointer: fine) {
+  .image-stack:hover img:first-child {
+    transform: translate(-8px, 8px) rotate(-2deg);
+  }
 
-.image-stack:hover img:last-child {
-  transform: translate(8px, -8px) rotate(2deg);
+  .image-stack:hover img:last-child {
+    transform: translate(8px, -8px) rotate(2deg);
+  }
 }
 
 .image-stack img:first-child {
-  left: -5%;
-  top: 100px;
-  z-index: 2;
+  width: 82%;
+  left: -4%;
+  top: 104px;
+  z-index: 1;
 }
 
 .image-stack img:last-child {
-  right: -5%;
-  top: 0;
-  height: 590px;
+  width: 46%;
+  right: -6%;
+  top: 20px;
+  margin: 0;
+  z-index: 2;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .image-stack img,
+  .image-stack:hover img:first-child,
+  .image-stack:hover img:last-child {
+    transform: none !important;
+    transition: box-shadow 0.25s ease;
+  }
 }
 
 /* =========================
@@ -1693,10 +1707,11 @@ h3 span {
   }
 
   .image-stack {
-    min-height: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    min-height: auto;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
     gap: 18px;
+    padding: 24px 0;
   }
 
   .image-stack img,
@@ -1704,7 +1719,9 @@ h3 span {
   .image-stack img:last-child {
     position: static;
     width: 100%;
-    height: 420px;
+    height: auto;
+    margin: 0;
+    object-fit: contain;
   }
 
   .logo-feature {
@@ -1860,6 +1877,8 @@ h3 span {
 
   .image-stack {
     grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 0;
   }
 
   .image-stack img,
@@ -1867,6 +1886,11 @@ h3 span {
   .image-stack img:last-child,
   .about-page-image img {
     height: auto;
+  }
+
+  .image-stack img:last-child {
+    width: min(72%, 320px);
+    justify-self: center;
   }
 
   .character-grid {

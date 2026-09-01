@@ -44,8 +44,22 @@ export default function Home() {
       <section className="home-about-preview">
         <div className="container about-preview-grid">
           <div className="image-stack">
-            <img src={assets.staceyAbout1} alt="Stacey" />
-            <img src={assets.staceyAbout2} alt="Stacey event" />
+            <img
+              src={assets.staceyAbout2}
+              alt="Stacey as a health coach"
+              width="1536"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src={assets.staceyAbout1}
+              alt="Stacey holding her book"
+              width="1086"
+              height="1448"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <div>
             <h2>Meet Stacey</h2>

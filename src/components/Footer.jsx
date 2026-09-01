@@ -9,12 +9,12 @@ export default function Footer() {
             <h2>Helping people of all ages grow into the strongest, most empowered version of themselves.</h2>
           </div>
 
-          <div className="footer-links">
+          <nav className="footer-links" aria-label="Footer navigation">
             <Link to="/metabolic-reset">A Life of Style</Link>
             <Link to="/the-overcomers">The Overcomers</Link>
             <Link to="/about">About Stacey</Link>
             <Link to="/contact">Contact</Link>
-          </div>
+          </nav>
         </div>
 
         <div className="footer-credit">

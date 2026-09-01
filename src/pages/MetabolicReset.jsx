@@ -5,6 +5,7 @@ export default function MetabolicReset() {
     <>
       <section className="sub-hero health-hero">
         <div className="container health-hero-content">
+          <h1 className="visually-hidden">Metabolic Health Coaching with A Life of Style</h1>
           <div className="logo-feature logo-feature-clean alife-logo-feature health-hero-logo">
             <img
               src={assets.alifeLogo}

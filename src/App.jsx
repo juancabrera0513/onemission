@@ -2,11 +2,13 @@ import { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Seo from "./components/Seo";
 import Home from "./pages/Home";
 import MetabolicReset from "./pages/MetabolicReset";
 import Overcomers from "./pages/Overcomers";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   const location = useLocation();
@@ -90,6 +92,7 @@ export default function App() {
 
   return (
     <div className="site">
+      <Seo />
       <div className="scroll-progress" aria-hidden="true" />
       <div className="ambient-motion" aria-hidden="true">
         <span className="ambient-orb ambient-orb-one" />
@@ -106,6 +109,7 @@ export default function App() {
           <Route path="/the-overcomers" element={<Overcomers />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 

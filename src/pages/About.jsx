@@ -18,15 +18,13 @@ export default function About() {
 
           <div className="about-hero-new-images">
             <img
-              src={assets.staceyAbout2}
-              alt="Stacey with reader"
-              className="about-main-img"
-            />
-
-            <img
-              src={assets.staceyAbout1}
-              alt="Stacey event"
-              className="about-floating-img"
+              src={assets.staceyAboutPortrait}
+              alt="Stacey smiling outside her home"
+              className="about-hero-portrait"
+              width="1537"
+              height="1023"
+              decoding="async"
+              fetchPriority="high"
             />
           </div>
         </div>

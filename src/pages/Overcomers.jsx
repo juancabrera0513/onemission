@@ -29,7 +29,7 @@ export default function Overcomers() {
       </section>
 
       <section className="book-intro-section">
-        <div className="container">
+        <div className="container book-intro-layout">
           <div className="book-intro-card">
             <p>
               With gentle lessons about confidence, compassion, and the power within, 
@@ -39,6 +39,17 @@ export default function Overcomers() {
               hearts encouraged to shine just as they are.
             </p>
           </div>
+
+          <figure className="book-intro-image">
+            <img
+              src={assets.staceyBookSigning}
+              alt="Stacey signing copies of Flippy the Frog at a book signing"
+              width="1452"
+              height="1085"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
         </div>
       </section>
 

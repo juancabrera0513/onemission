@@ -1,6 +1,8 @@
 export const assets = {
   alifeLogo: "/assets/alife-logo.png",
   overcomersLogo: "/assets/overcomers-logo.png",
+  staceyBookSigning: "/assets/stacey-flippy-book-signing.png",
+  staceyAboutPortrait: "/assets/stacey-about-portrait.png",
   staceyHero: "/assets/stacey-hero.jpg",
   staceyAbout1: "/assets/stacey-about-1.jpg",
   staceyAbout2: "/assets/stacey-about-2.jpg",

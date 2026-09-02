@@ -107,13 +107,27 @@ export default function MetabolicReset() {
           </div>
 
           <div className="steps-grid">
-            <article>
+            <article className="step-card--linked">
+              <a
+                href={links.preCallAssessment}
+                target="_blank"
+                rel="noreferrer"
+                className="step-card-hitarea"
+                aria-label="Open the Pre-Call Assessment"
+              />
               <span>Step 1</span>
               <h3>Pre-Call Assessment</h3>
               <p>Start with the health evaluation so the next step is&nbsp;clear.</p>
             </article>
 
-            <article>
+            <article className="step-card--linked">
+              <a
+                href={links.metabolicScan}
+                target="_blank"
+                rel="noreferrer"
+                className="step-card-hitarea"
+                aria-label="Open the Metabolic Scan"
+              />
               <span>Step 2</span>
               <h3>Metabolic Scan</h3>
               <p>Answer a few questions and get a metabolic assessment in your inbox&nbsp;today.</p>

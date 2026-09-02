@@ -4911,6 +4911,7 @@ body {
 .steps-grid article:nth-child(1),
 .steps-grid article:nth-child(2),
 .steps-grid article:nth-child(3) {
+  position: relative;
   border: 3px solid var(--step-color);
   background:
     radial-gradient(circle at 100% 100%, var(--step-glow) 0 24%, transparent 24.5%),
@@ -4920,6 +4921,22 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+
+.steps-grid article.step-card--linked {
+  cursor: pointer;
+}
+
+.step-card-hitarea {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  border-radius: calc(var(--radius) - 3px);
+}
+
+.step-card-hitarea:focus-visible {
+  outline: 4px solid var(--step-color);
+  outline-offset: 5px;
 }
 
 .steps-grid article:nth-child(1):hover,

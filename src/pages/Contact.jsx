@@ -1,7 +1,35 @@
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Link } from "react-router-dom";
 import { assets, links } from "../data/content";
 
+const EMAILJS_SERVICE_ID = "service_vgn4uus";
+const EMAILJS_TEMPLATE_ID = "template_f5cokgn";
+const EMAILJS_PUBLIC_KEY = "yeWDJPhbNnW95gXML";
+
 export default function Contact() {
+  const [formStatus, setFormStatus] = useState("idle");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    setFormStatus("sending");
+
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        form,
+        { publicKey: EMAILJS_PUBLIC_KEY },
+      );
+      form.reset();
+      setFormStatus("success");
+    } catch {
+      setFormStatus("error");
+    }
+  }
+
   return (
     <>
       <section className="contact-hero">
@@ -59,7 +87,7 @@ export default function Contact() {
             <form
               className="contact-form"
               data-emailjs-ready="true"
-              onSubmit={(event) => event.preventDefault()}
+              onSubmit={handleSubmit}
             >
               <label htmlFor="contact-name">
                 Name
@@ -87,10 +115,10 @@ export default function Contact() {
                 I’m interested in
                 <select id="contact-interest" name="inquiry_type" defaultValue="" required>
                   <option value="" disabled>Choose one</option>
-                  <option value="health-coaching">Health coaching</option>
-                  <option value="author-appearance">Author appearance</option>
-                  <option value="book-reading">Book reading</option>
-                  <option value="general">General question</option>
+                  <option value="Health coaching">Health coaching</option>
+                  <option value="Author appearance">Author appearance</option>
+                  <option value="Book reading">Book reading</option>
+                  <option value="General question">General question</option>
                 </select>
               </label>
 
@@ -99,9 +127,26 @@ export default function Contact() {
                 <textarea id="contact-message" name="message" rows="4" required />
               </label>
 
-              <button type="submit" className="btn btn-precall contact-submit">
-                Let’s Connect
+              <button
+                type="submit"
+                className="btn btn-precall contact-submit"
+                disabled={formStatus === "sending"}
+              >
+                {formStatus === "sending" ? "Sending..." : "Let’s Connect"}
               </button>
+
+              <div className="contact-form-feedback" aria-live="polite">
+                {formStatus === "success" && (
+                  <p className="contact-form-feedback--success">
+                    Thank you! Your message is on its way.
+                  </p>
+                )}
+                {formStatus === "error" && (
+                  <p className="contact-form-feedback--error">
+                    We couldn’t send your message. Please try again in a moment.
+                  </p>
+                )}
+              </div>
             </form>
           </aside>
 

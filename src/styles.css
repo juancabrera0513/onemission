@@ -4885,28 +4885,36 @@ body {
 
 /* Color-matched metabolic steps */
 .steps-grid article:nth-child(1) {
-  --step-color: #6a5136;
-  --step-soft: #fbf3e8;
-  --step-shadow: rgba(106, 81, 54, 0.18);
+  --step-color: #6a704a;
+  --step-soft-start: #e8efda;
+  --step-soft-end: #fbfcf7;
+  --step-glow: rgba(106, 112, 74, 0.13);
+  --step-shadow: rgba(106, 112, 74, 0.2);
 }
 
 .steps-grid article:nth-child(2) {
   --step-color: #c98200;
-  --step-soft: #fff6cf;
+  --step-soft-start: #fff0b7;
+  --step-soft-end: #fffdf5;
+  --step-glow: rgba(239, 168, 35, 0.14);
   --step-shadow: rgba(239, 168, 35, 0.22);
 }
 
 .steps-grid article:nth-child(3) {
-  --step-color: #6a704a;
-  --step-soft: #f0f4e6;
-  --step-shadow: rgba(106, 112, 74, 0.2);
+  --step-color: #2b6f99;
+  --step-soft-start: #dceef8;
+  --step-soft-end: #f8fcff;
+  --step-glow: rgba(43, 111, 153, 0.12);
+  --step-shadow: rgba(43, 111, 153, 0.2);
 }
 
 .steps-grid article:nth-child(1),
 .steps-grid article:nth-child(2),
 .steps-grid article:nth-child(3) {
   border: 3px solid var(--step-color);
-  background: linear-gradient(145deg, #fffdf8, var(--step-soft));
+  background:
+    radial-gradient(circle at 100% 100%, var(--step-glow) 0 24%, transparent 24.5%),
+    linear-gradient(100deg, var(--step-soft-start) 0%, var(--step-soft-end) 100%);
   box-shadow: 9px 10px 0 var(--step-shadow);
   display: flex;
   align-items: center;
@@ -5238,29 +5246,29 @@ body {
 }
 
 .contact-card--health {
-  border-color: var(--sky-dark);
+  border-color: var(--sage-dark);
   background:
-    radial-gradient(circle at 12% 10%, rgba(184, 217, 237, 0.48), transparent 34%),
-    linear-gradient(145deg, #ffffff, #eef7fc);
-  box-shadow: 10px 12px 0 rgba(43, 111, 153, 0.16);
+    radial-gradient(circle at 100% 100%, rgba(106, 112, 74, 0.13) 0 24%, transparent 24.5%),
+    linear-gradient(100deg, #e8efda 0%, #fbfcf7 100%);
+  box-shadow: 10px 12px 0 rgba(106, 112, 74, 0.2);
 }
 
 .contact-card--books {
-  border-color: var(--sage-dark);
+  border-color: var(--sky-dark);
   background:
-    radial-gradient(circle at 88% 10%, rgba(239, 168, 35, 0.22), transparent 34%),
-    linear-gradient(145deg, #fffdf8, #f0f4e6);
-  box-shadow: 10px 12px 0 rgba(106, 112, 74, 0.18);
+    radial-gradient(circle at 100% 100%, rgba(43, 111, 153, 0.12) 0 24%, transparent 24.5%),
+    linear-gradient(100deg, #dceef8 0%, #f8fcff 100%);
+  box-shadow: 10px 12px 0 rgba(43, 111, 153, 0.2);
 }
 
 .contact-card--health:hover {
-  border-color: var(--sky-dark);
-  box-shadow: 13px 15px 0 rgba(43, 111, 153, 0.2);
+  border-color: var(--sage-dark);
+  box-shadow: 13px 15px 0 rgba(106, 112, 74, 0.24);
 }
 
 .contact-card--books:hover {
-  border-color: var(--sage-dark);
-  box-shadow: 13px 15px 0 rgba(106, 112, 74, 0.22);
+  border-color: var(--sky-dark);
+  box-shadow: 13px 15px 0 rgba(43, 111, 153, 0.24);
 }
 
 .contact-options .contact-grid {
@@ -5287,10 +5295,9 @@ body {
   border: 3px solid var(--gold);
   border-radius: var(--radius);
   background:
-    radial-gradient(circle at 90% 8%, rgba(184, 217, 237, 0.52), transparent 32%),
-    radial-gradient(circle at 8% 92%, rgba(239, 168, 35, 0.2), transparent 34%),
-    linear-gradient(145deg, #fffaf0, #ffffff);
-  box-shadow: 10px 12px 0 rgba(239, 168, 35, 0.2);
+    radial-gradient(circle at 100% 100%, rgba(239, 168, 35, 0.14) 0 24%, transparent 24.5%),
+    linear-gradient(100deg, #fff0b7 0%, #fffdf5 100%);
+  box-shadow: 10px 12px 0 rgba(239, 168, 35, 0.22);
   text-align: center;
 }
 

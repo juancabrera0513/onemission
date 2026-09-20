@@ -4900,7 +4900,8 @@ body {
   --step-shadow: rgba(239, 168, 35, 0.22);
 }
 
-.steps-grid article:nth-child(3) {
+.steps-grid article:nth-child(3),
+.reset-dialog {
   --step-color: #2b6f99;
   --step-soft-start: #dceef8;
   --step-soft-end: #f8fcff;
@@ -4932,6 +4933,124 @@ body {
   z-index: 2;
   inset: 0;
   border-radius: calc(var(--radius) - 3px);
+}
+
+.step-card-modal-trigger {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.reset-dialog {
+  width: min(540px, calc(100% - 32px));
+  max-height: calc(100dvh - 40px);
+  margin: auto;
+  padding: 0;
+  border: 3px solid var(--step-color);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 100% 100%, var(--step-glow) 0 24%, transparent 24.5%),
+    linear-gradient(100deg, var(--step-soft-start) 0%, var(--step-soft-end) 100%);
+  color: var(--step-color);
+  box-shadow: 9px 10px 0 var(--step-shadow), 0 24px 80px rgb(0 0 0 / 24%);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.reset-dialog::backdrop {
+  background: rgb(17 30 39 / 60%);
+  backdrop-filter: blur(4px);
+}
+
+.reset-dialog-content {
+  position: relative;
+  padding: clamp(24px, 5vw, 36px);
+}
+
+.reset-dialog-dismiss {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.reset-dialog-close {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--step-color);
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.reset-dialog h2 {
+  margin: 0 32px 20px 0;
+  color: var(--step-color);
+  font-size: clamp(1.35rem, 4vw, 1.65rem);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.reset-dialog-steps {
+  padding-left: 24px;
+  margin: 0 0 20px;
+}
+
+.reset-dialog-steps li {
+  padding-left: 5px;
+  margin-bottom: 7px;
+  line-height: 1.45;
+}
+
+.reset-dialog-steps li::marker {
+  color: var(--step-color);
+  font-weight: 700;
+}
+
+.reset-dialog p {
+  margin: 0 0 14px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.reset-dialog .reset-dialog-invitation {
+  margin-bottom: 0;
+}
+
+.reset-dialog-invitation a {
+  color: var(--step-color);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.reset-dialog :focus-visible {
+  outline: 3px solid var(--step-color);
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .reset-dialog {
+    width: calc(100% - 24px);
+    max-height: calc(100dvh - 32px);
+    border-radius: 16px;
+    box-shadow: 5px 6px 0 var(--step-shadow), 0 16px 48px rgb(0 0 0 / 24%);
+  }
+
+  .reset-dialog-content {
+    padding: 22px 20px;
+  }
+
+  .reset-dialog h2 {
+    margin-right: 34px;
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
 }
 
 .step-card-hitarea:focus-visible {

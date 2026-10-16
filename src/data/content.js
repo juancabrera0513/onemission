@@ -22,4 +22,6 @@ export const links = {
   flippyAmazon:
     "https://www.amazon.com/Flippy-Frog-More-Like-Overcomers/dp/1956581812",
   flippyColoringBook: "https://a.co/d/08c16FCX",
+  pillyAmazon: "https://a.co/d/0iH19iyG",
+  pillyColoringBook: "https://a.co/d/0blKuEkX",
 };

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { assets, links } from "../data/content";
 
 const SITE_URL = "https://onebigmission.com";
 const SOCIAL_IMAGE = `${SITE_URL}/og.png`;
@@ -81,6 +82,14 @@ function getPageSchema(pathname, canonical, meta) {
           audience: { "@type": "PeopleAudience", suggestedMinAge: 3, suggestedMaxAge: 7 },
           sameAs:
             "https://www.amazon.com/Flippy-Frog-More-Like-Overcomers/dp/1956581812",
+        },
+        {
+          "@type": "Book",
+          name: "Pilly the Penguin: A Big Adventure",
+          url: `${canonical}#pilly-title`,
+          image: `${SITE_URL}${assets.penguin}`,
+          author: { "@type": "Person", name: "Stacey Solomon Pratt" },
+          sameAs: links.pillyAmazon,
         },
       ],
     };

@@ -5022,7 +5022,12 @@ body {
   margin-bottom: 0;
 }
 
-.reset-dialog-invitation a {
+.reset-message-trigger {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
   color: var(--step-color);
   font-weight: 700;
   text-decoration: underline;

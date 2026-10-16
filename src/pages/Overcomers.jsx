@@ -132,6 +132,80 @@ export default function Overcomers() {
         </div>
       </section>
 
+      <section className="featured-book-section" aria-labelledby="pilly-title">
+        <div className="container featured-book-grid">
+          <div className="book-cover-panel">
+            <img
+              src={assets.penguin}
+              alt="Pilly the Penguin illustration"
+              width="615"
+              height="750"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div className="book-content">
+            <h2 id="pilly-title" className="book-title">
+              <span>Pilly the Penguin:</span>
+              <span>A Big Adventure</span>
+            </h2>
+
+            <p>
+              Pilly the Penguin is tired of snow, ice, and chilly days. While he
+              loves his family and friends, he dreams of sunshine, sand, and palm
+              trees. Determined to find the warm paradise he’s always imagined,
+              Pilly sets off on a big adventure far from home.
+            </p>
+
+            <p>
+              But his adventure doesn’t unfold quite the way he imagined. As Pilly
+              faces unexpected challenges, he discovers that being brave isn’t
+              always about pushing forward; sometimes, it means having the courage
+              to change course.
+            </p>
+
+            <p>Will Pilly find the warm-weather life he’s been dreaming of?</p>
+
+            <p>
+              Or will his adventure lead him to discover something even more
+              important along the way?
+            </p>
+
+            <p>
+              Pilly the Penguin: A Big Adventure is a heartwarming story about
+              courage, self-discovery, staying true to yourself, and learning that
+              changing course doesn’t mean you’ve failed.
+            </p>
+
+            <p>
+              Perfect for young explorers who love adventure — and the adults who
+              help them find their way.
+            </p>
+
+            <div className="button-row">
+              <a
+                href={links.pillyAmazon}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-dark"
+              >
+                Shop Pilly the Penguin
+              </a>
+
+              <a
+                href={links.pillyColoringBook}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-outline-pink"
+              >
+                The Coloring Book
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="characters-section">
         <div className="container">
           <div className="section-heading center">
@@ -143,7 +217,7 @@ export default function Overcomers() {
 
           <div className="character-grid">
             <img src={assets.flippyFrog} alt="Flippy the Frog illustration" width="735" height="750" loading="lazy" decoding="async" />
-            <img src={assets.penguin} alt="Penguin illustration" width="615" height="750" loading="lazy" decoding="async" />
+            <img src={assets.penguin} alt="Pilly the Penguin illustration" width="615" height="750" loading="lazy" decoding="async" />
             <img src={assets.elephantSketch} alt="Elephant sketch" width="440" height="750" loading="lazy" decoding="async" />
             <img src={assets.dogSketch} alt="Dog sketch" width="750" height="679" loading="lazy" decoding="async" />
             <img src={assets.rhinoSketch} alt="Rhino sketch" width="689" height="700" loading="lazy" decoding="async" />

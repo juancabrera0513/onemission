@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import ResetInquiryForm from "../components/ResetInquiryForm";
 import { assets, links } from "../data/content";
 
 export default function MetabolicReset() {
   const [resetOpen, setResetOpen] = useState(false);
+  const [showResetForm, setShowResetForm] = useState(false);
   const resetDialog = useRef(null);
 
   useEffect(() => {
@@ -158,7 +159,10 @@ export default function MetabolicReset() {
                 className="step-card-hitarea step-card-modal-trigger"
                 aria-label="Read six small steps to start resetting your metabolism"
                 aria-haspopup="dialog"
-                onClick={() => setResetOpen(true)}
+                onClick={() => {
+                  setShowResetForm(false);
+                  setResetOpen(true);
+                }}
               />
               <span>Step 3</span>
               <h3>Reset Your Metabolism</h3>
@@ -178,10 +182,11 @@ export default function MetabolicReset() {
       >
         <div className="reset-dialog-content">
           <form method="dialog" className="reset-dialog-dismiss">
-            <button type="submit" className="reset-dialog-close" aria-label="Close metabolic reset tips">
+            <button type="submit" className="reset-dialog-close" aria-label="Close metabolic reset dialog">
               ×
             </button>
           </form>
+          {showResetForm ? <ResetInquiryForm /> : <>
           <h2 id="reset-dialog-title">6 small steps to start resetting your metabolism</h2>
           <ol className="reset-dialog-steps">
             <li>Prioritize protein.</li>
@@ -199,9 +204,10 @@ export default function MetabolicReset() {
           <p>That’s where the right nutrition, structure and accountability come in.</p>
           <p>Curious what a metabolic reset could look like for you?</p>
           <p className="reset-dialog-invitation">
-            <Link to="/contact" onClick={() => setResetOpen(false)}>Message me RESET</Link>{" "}
+            <button type="button" className="reset-message-trigger" onClick={() => setShowResetForm(true)}>Message me RESET</button>{" "}
             and I’ll show you what we can do together
           </p>
+          </>}
         </div>
       </dialog>
     </>

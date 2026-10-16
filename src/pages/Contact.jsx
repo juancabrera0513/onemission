@@ -1,11 +1,7 @@
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
+import { sendInquiry } from "../data/email";
 import { Link } from "react-router-dom";
 import { assets, links } from "../data/content";
-
-const EMAILJS_SERVICE_ID = "service_vgn4uus";
-const EMAILJS_TEMPLATE_ID = "template_f5cokgn";
-const EMAILJS_PUBLIC_KEY = "yeWDJPhbNnW95gXML";
 
 export default function Contact() {
   const [formStatus, setFormStatus] = useState("idle");
@@ -17,12 +13,7 @@ export default function Contact() {
     setFormStatus("sending");
 
     try {
-      await emailjs.sendForm(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        form,
-        { publicKey: EMAILJS_PUBLIC_KEY },
-      );
+      await sendInquiry(form);
       form.reset();
       setFormStatus("success");
     } catch {
